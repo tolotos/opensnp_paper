@@ -133,9 +133,9 @@ Done in Google Docs, questions on age, chromosomal sex, ethnicity, if they are a
 The results were analyzed in somestatisticstool. 
 
 \subsection*{Technical realization of the platform}
-The main platform is realized using the web-framework Ruby on Rails. Postgres is used as the main database backend for Rails. The database stores genotyping results, phenotypic information of the users, literature results of Mendeley, the Public Library of Science and summaries on SNPs which can be found in SNPedia. 
+The main platform is realized using the web-framework Ruby on Rails. Postgres is used as the main database backend for Rails. The database stores genotyping results, phenotypic information of the users, literature results of Mendeley, the Public Library of Science and summaries on SNPs which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of the Public Library of Science is queried using the respective REST API, which delivers results in XML. Summaries on SNPs are provided by SNPedia, through querying the content through the MediaWiki-API. 
 
-The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of the Public Library of Science is queried using the respective REST API, which delivers results in XML. Summaries on SNPs are provided by SNPedia, through querying the content through the MediaWiki-API. 
+SNPs are cataloged by their unique identifier, which consists of a prefix (mostly \textit{rs}) and a unique number. This is a common format which is used by the NCBI dbSNP database and is also widely used and easily parsed from different literature-sources.   
 
 Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are be mailed to users and queries to external resources are handled using the ruby-gem Resque and a Redis-server. Search-features on the platform itself are implemented using SOLR and the ruby-gem sunspot. Additionally data can be requested from openSNP using the Distributed Annotation System. The data for this is stored in a mySQL-database, the delivery of the data is done by using ProServer, which was modified by Gel et al. for use in easyDAS.  
 
