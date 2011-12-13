@@ -76,7 +76,7 @@ Fabian Zimmer$^{3,}$
 \\
 \bf{1} Bastian Greshake Frankfurt am Main, Germany
 \\
-\bf{2} Philipp Bayer somewhere, Australia
+\bf{2} Philipp Bayer Gold Coast, Australia
 \\
 \bf{3} Fabian Zimmer M\"unster, Germany
 \\
@@ -85,6 +85,8 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
+Genome wide association studies (GWAS) are a cheap and quick way to assess health risks by comparing Single Nucleotide Polymorphisms (SNPs) between groups of participants. Direct-To-Consumer Companies like 23andme offer their customers to sequence their SNPs alongside with an evaluation of the customer's genetic risks. However, the data 23andme and other companies generate is not accessible for other scientists, and withholds some information from their customers for various reasons. In this paper, we present an open approach to GWAS by introducing openSNP, a webpage which allows GWAS-customers to openly share their SNPs with scientists for free.  % misses survey
+
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLoS ONE authors please skip this step. 
@@ -153,22 +155,25 @@ Advantages for customers:
 
 Genome Wide Association Studies (GWAS) are an easy and cheap way to find Single Nucleotide Polymorphisms (SNPs) which can be interesting because of their medical relevance. SNPs found through GWAS can be used to find candidate genes for a closer inspection or to predict disease risks. Genome Wide Association Studies make use of statistics to compare the alleles of patients to the alleles of healthy controls. By this the method does not allow to find causal differences but mere correlations. The first GWAS was published in 2005 and compared age-related macular degeneration in contrast to a healthy control group (doi:10.1126/science.1109557). Since the beginning the number of participants in those studies is rising and over 1200 GWAS have been performed (doi:10.1186/1471-2350-10-6.) and over 5000 SNPs have been linked to different diseases and traits in those studies %(http://www.genome.gov/page.cfm?pageid=26525384&clearquery=1#result_table).
 
-Since 2006 there are different companies like 23andMe, deCODEme or FamilyTreeDNA on the market which offer Direct-To-Consumer (DTC) genetic testing. Those companies use DNA micro arrays to screen for around 1 million SNPs which are spread over the human genome. In return customers get an analysis of the results, as well as a raw file that includes the SNP-IDs and their respective allele for the customer. In 2011 23andMe alone had over 100.000 customers (http://spittoon.23andme.com/2011/06/15/23andme-2011-state-of-the-database-address/) and the company also recognizes the potential to do GWAS with that amount of data. They provide surveys to their customers that ask about traits and genetic diseases. With the consent of the customer those data will then be used for association studies. 23andMe published 3(?) articles in 2011 in which they replicate known findings but also find new associations for Parkinson's Disease. By activating their customer base they achieved to have over 30.000 individuals enrolled in those association studies.  
+Since 2006 companies like 23andMe, deCODEme or FamilyTreeDNA offer Direct-To-Consumer (DTC) genetic testing. Those companies use DNA micro arrays to screen for around 1 million SNPs spread over the human genome. In return customers get an analysis of the results, as well as a raw file that includes the SNP-IDs and their respective allele for the customer. In 2011 23andMe alone had over 100.000 customers\footnote{http://spittoon.23andme.com/2011/06/15/23andme-2011-state-of-the-database-address/} - the company recognizes the potential to perform GWAS with that amount of data by using surveys to ask their customers about traits and diseases. With the consent of the customer those data is used for association studies. 23andMe published several articles in which they replicate known findings but also find new associations for Parkinson's Disease \cite{Eriksson2010, Do2011}. Over 30,000 23andme-customers participated in those association studies.  
 
-Although companies like 23andMe are willing to contribute to science it is not easy for individual scientists to get hold of the data. This arises mainly due to privacy concerns of the customers. Nevertheless there are individual customers who are willingly sharing their data. Most do though by uploading it to their personal website or to software repositories like GitHub. While this is makes it possible to use the data, it requires a lot of work to keep track of all new genotyping data that is available to the public. While projects like the SNPedia try to keep track of all the files, this still does not allow to perform GWAS, as the phenotypic information is not attached to the genetic information. Projects that attach the phenotype to the genetic information, like the Personal Genome Project, still don't allow for an easy re-use of the data.  
+Although companies like 23andMe are willing to contribute to science it is not easy for individual scientists to access the data. This is mainly due to privacy concerns of the customers. Nevertheless there are individual customers who are willingly sharing their data. Most do so by uploading their data to their personal website or to open software repositories like GitHub. While this is makes it possible for scientists to access the data, it requires a lot of work to keep track of all new genotyping data that is available to the public. While projects like the SNPedia try to keep track of all the files, this still does not allow to perform GWAS, as the phenotypic information is not attached to the genetic information. Projects that attach the phenotype to the genetic information, like the Personal Genome Project, still don't allow for an easy re-use of the data. %WHY?  
 
-A possible solution to this can be a community-driven platform that aggregates genetical and phenotypical information of people who are willing to share their data with the general public and have given their informed consent. In our study we investigated if there would be interest in such a crowd sourcing platform, how many people would be willing to share their genetic and phenotypic information with the public and built such a platform. 
+A possible solution to this can be a community-driven platform that aggregates genetical and phenotypical information of people who are willing to share their data with the general public and have given their informed consent. We designed a survey to assess interest in such a crowd sourcing platform, in which we asked how many people would be willing to share their genetic and phenotypic information with the public. 
 
 % Results and Discussion can be combined.
 \section*{Results}
 
 \subsection*{Survey on Sharing Genetic Information}
-229 people, 180 with a self-reported chromosomal sex of XY, 56 with a self-reported chromosomal sex of XX, participated in the survey. The mean age of the participants is 33 (SD = 11,29) and over 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already customer of at least one DTC genetic testing company and further 30.1 \% of them plan to become one in the future. 29.7 \% don't plan to become a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Somers-d). 
+229 participants filled out the survey. Of these 229, 180 had a self-reported chromosomal sex of XY and 56 carried a self-reported chromosomal sex of XX. The mean age of the participants is 33 (SD = 11,29) and over 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already customer of at least one DTC genetic testing company and further 30.1 \% of them plan to become one in the future. 29.7 \% don't plan to become a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Somers-d). 
 
-67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would do so, if the company does not share the data with third parties. 6.6 \% of the participants would not share their data. There is no significant difference between sharing-habits between both chromosomal sexes (Somers-d). Those who are a customer of a DTC company or are planing to become one in the future are more likely to share their results, compared to those who don't plan to get themselves genotyped (Somers-d). 
-\subsection*{Subsection 2}
+67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would share if the company does not share the data with third parties. 6.6 \% of the participants would not share their data. There is no significant difference between sharing-habits between both chromosomal sexes (Somers-d). Those who are a customer of a DTC company or are planning to become one in the future are more likely to share their results, as compared to those who don't plan to get themselves genotyped (Somers-d). 
+
+\subsection*{Introducing openSNP}
+We've created openSNP, a website which allows users to upload their genotypings from the companies 23andme, deCODEme and Family Tree under the Creative Commons Zero-license. Users are encouraged to list as many phenotypes as possible due to a simple achievement-system similar to systems found in computer games. 
 
 \section*{Discussion}
+to-do list together with outlook of personalised medicine
 
 % You may title this section "Methods" or "Models". 
 % "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
@@ -181,7 +186,7 @@ A possible solution to this can be a community-driven platform that aggregates g
 
 %\section*{References}
 % The bibtex filename
-\bibliography{template}
+\bibliography{papers}
 
 \section*{Figure Legends}
 %\begin{figure}[!ht]
