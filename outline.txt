@@ -1,0 +1,83 @@
+# INTRODUCTION
+
+## Paragraph1:
+Investigate the link between genetic variation and phenotypic change
+Important because of desease stuff.
+
+Tool used: Genome Wide Association Studies.
+--> Describe in one sentence.
+--> 2005 first study
+--> Today 1200 GWAS performed
+
+genetic markers usually SNPs.
+SNPs definition. Allele definition.
+SNP can be linked to a phenotypic trait (around 5000 linked to desease)
+ 
+## Paragraph2:
+How to obtain data for GWAS?
+--> SNPChip, used in many different species
+--> Now different companies for DTC genetic testing.
+--> Test results provided to customer and raw data
+--> Raw data can be used for GWAS, but closed
+
+
+
+## Paragraph3:
+RAW data from 1000 of individuals could be used for multiple scientific
+purposes
+---> Large potential dataset Are the numbers available for dataset size used
+in scientic studies? 2005 93, 2008 500, 2011 23andme 100000? Plot?
+
+Resolution of the problem: Open Science
+Create repository for sharing this information. openSNP
+
+
+## Paragraph4:
+
+Describe openSNP:
+Open Source, non-commercial
+Open Data
+Community driven --> Crowd sourcing
+
+
+Parses data from 23andMe deCODEme....
+--> Publications crawler (Maybe mention mendeley price?)
+        --PLOS and Mendeley
+
+Advantages for scientists: See paragraph 3
+
+Advantages for customers: 
+-->Make sense of the data
+-->Contribute to the public domain
+
+
+# RESULTS
+* Graphics: 
+** Screenshot of openSNP
+** Plot of rise in users, genotypes, phenotypes (x = time, y = number
+** Plot of distribution of userphenotypes on phenotypes (x = Number of users which have entered data on single phenotype y= number of phenotypes with that many users) 
+** Pie-Chart of publications (snpedia,plos,mendeley OA, mendeley closed access)
+ 
+# DISCUSSION
+to-do list together with outlook of personalised medicine
+
+## Paragraph 1:
+
+First focus on biological issues:
+
+Polymorphisms to phenotypes, correlation only.
+Bias in the samples collected by openSNP?
+Sample size to small?
+Quality check for phenotypes?
+Mapping to haplotype blocks?
+Combination with the hapmap
+Manage increasing amount of data?
+
+## Paragraph 2:
+from great power follows great responsibility!
+
+Imagine a world where all data is free...
+What privacy issues do arise? 
+Is there an effective mechanism to avoid abuse or
+genetic discrimination?
+How should governments treat the additional  data?
