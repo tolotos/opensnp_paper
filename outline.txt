@@ -65,9 +65,9 @@ to-do list together with outlook of personalised medicine
 
 First focus on biological issues:
 
-Polymorphisms to phenotypes, correlation only.
-Bias in the samples collected by openSNP?
-Sample size to small?
+Polymorphisms to phenotypes, correlation only. done
+Bias in the samples collected by openSNP? done
+Sample size to small? done
 Quality check for phenotypes?
 Mapping to haplotype blocks?
 Combination with the hapmap
