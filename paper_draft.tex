@@ -96,7 +96,7 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are a cheap and quick way of assessing health risks by comparing Single Nucleotide Polymorphisms between groups of participants. Direct-To-Consumer Companies like 23andme offer SNP sequencing to their customers alongside with an evaluation of the customer's genetic risks. However, the data 23andme and other companies generate is not accessible to other scientists, and withholds some information from customers for various reasons. In this paper, we present an open approach to Genome-wide association studies by introducing openSNP, a web platform which allows customers to openly share their polymorphisms with scientists for free.  % misses survey
+Genome-wide association studies are a cheap and quick way of assessing health risks by comparing Single Nucleotide Polymorphisms between groups of participants. Direct-To-Consumer (DTC) Companies like 23andme offer SNP sequencing to their customers alongside with an evaluation of the customer's genetic risks. However, the data 23andme and other companies generate is not accessible to other scientists, and withholds some information from customers for various reasons. In this paper, we present an open approach to Genome-wide association studies by introducing openSNP, a web platform which allows customers to openly share their polymorphisms with scientists for free. We also present results of a survey to assess the willingness of DTC-customers to openly share their genotyping and polymorphisms.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -113,7 +113,7 @@ Different methods have been developed to read SNPs in an individual, a
 process called genotyping. Microarrays are a cheap, fast and widespread used way to genotype individuals, in comparison
 to whole genome sequencing. If the genotypes for more then one individual are known, the analysis of
 allele frequencies can be used to associated SNPs with diseases and other inheritable traits. Genome-Wide Assocation Studies
-(GWAS) make use of statistics for comparing the alleles of patients to the alleles of healthy controls. This
+(GWAS) make use of statistics to compare the alleles of patients to the alleles of healthy controls. This
 enables GWAS to find alleles which are significantly overrepresented in patients and associate them with a disease.
 This method does not allow inference of causal differences but merely identifies correlations. 
 The first GWAS was published in 2005 and compared age-related macular degeneration in contrast 
@@ -122,8 +122,7 @@ such studies has been rising: Over 1200 GWAS have been performed \cite{Johnson20
 5000 SNPs have been linked to different diseases and traits in those studies \cite{Hindorff2009}. 
 %(http://www.genome.gov/page.cfm?pageid=26525384&clearquery=1#result_table)  
 
-
-Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. Those companies use DNA microarrays to screen for around 1 million SNPs spread over the human genome. In return customers get an analysis of the results, as well as a raw file that includes the customer's individual genotypes. In 2011, 23andMe alone had over 100,000 customers\footnote{http://spittoon.23andme.com/2011/06/15/23andme-2011-state-of-the-database-address/} - the company recognizes the potential to perform GWAS with this amount of data by using surveys to ask their customers about traits and diseases. With the consent of the customer the data is used for association studies. 23andMe has published several articles in which it replicates known findings, but also finds new associations for Parkinson's Disease \cite{Eriksson2010, Do2011}. Over 30,000 23andme-customers have participated in those association studies.  
+Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. Those companies use DNA microarrays to screen for around 1 million SNPs spread over the human genome. In return, customers get an analysis of the results, as well as a file that includes the customer's raw individual genotypes. In 2011, 23andMe alone had over 100,000 customers\footnote{http://spittoon.23andme.com/2011/06/15/23andme-2011-state-of-the-database-address/} - the company recognizes the potential to perform GWAS with this amount of data by using surveys to ask their customers about traits and diseases. With the consent of the customer the data is used for association studies. 23andMe has published several articles in which it replicates known findings, but also finds new associations for Parkinson's Disease \cite{Eriksson2010, Do2011}. Over 30,000 23andme-customers have participated in those association studies.  
 
 Although companies like 23andMe are willing to contribute to science, it is not easy for individual scientists to access the data. This is mainly due to concerns about privacy, liability and consent. Nevertheless, there are individual customers who are willingly sharing their data. Most do so by uploading their data to their personal website or to open software repositories like \textit{GitHub}. 
 
@@ -135,7 +134,7 @@ We designed an online survey to evaluate the support in the community for a crow
 \section*{Results}
 
 \subsection*{Survey on Sharing Genetic Information}
-229 people, 180 with a self-reported chromosomal sex of XY, 56 with a self-reported chromosomal sex of XX, participated in the survey. The mean age of the participants is 33 (SD = 11,29) and 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% don't plan on becoming a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Somers-d). 
+229 people, 180 with a self-reported chromosomal sex of XY and 56 with a self-reported chromosomal sex of XX participated in the survey. The mean age of the participants is 33 (SD = 11,29). 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% don't plan on becoming a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Somers-d). 
 
 67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would do so given the company didn't share the data with third parties. 6.6 \% of the participants would not share their data. There is no significant difference in readiness to share between chromosomal sexes (Somers-d). Those who are a customers of a DTC company or are planning on becoming one in the future are more likely to share their results, compared to those who don't plan on getting themselves genotyped (Somers-d). 
 
@@ -156,9 +155,9 @@ Currently users can upload their genotypings from the companies 23andme, deCODEm
 project. The uploaded data is published under the Creative Commons Zero-license, 
 which - in accordance with the Panton Principles (doi:10.1371/journal.pbio.1001195) - 
 allows a complete reuse of the data without any constraints.
-Between the start of openSNP on 09/27/2011 and 12/18/2011, 214 people have signed 
-up with openSNP, 79 of which have uploaded their genotyping files. The openSNP 
-database thereby lists 69,486,471 SNPs, which are distributed over 1,938,604 unique Rs-IDs.
+Between the start of openSNP on 09/27/2011 and 27/02/2012, 286 people have signed 
+up with openSNP, and 117 genotyping files were made available. The openSNP 
+database lists 69,486,471 SNPs, which are distributed over 1,938,603 unique SNP-IDs.
 
 \subsubsection*{Crowdsourcing phenotypes}
 Beside uploading genotypic data, users may list new phenotypes that are not yet 
@@ -193,6 +192,8 @@ OpenSNP offers extensive access to the data uploaded by users. Anyone can downlo
 
 \subsubsection*{Survey issues}
 Because of this approach, the results do not reflect the general population, but overrepresent those people most likely to be interested in a project such as openSNP: customers of DTC genetic testing companies and people with a high interest in biology. As we wanted to find out about interest in crowdsourcing GWAS and about how people who had purchased DTC genetic testing felt about sharing their data with third parties, this approach was warranted.
+\philipp{"Because of this approach", what approach?}
+
 \subsubsection*{GWAS and open data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS tend to stay considerably cheaper and offer a possibility of getting insight into genetic variations on a population level and allow an analysis of SNPs which are linked to different traits. Despite this benefit in terms of cost, it must be pointed out that GWAS can only detect correlations of SNPs with those traits and don't allow inference on the cause for any correlation. Furthermore, GWAS need a large enough sample which has to be statistically analysed by using sound methods. Nevertheless, GWAS are still frequently used and new associations still can be found (we should list some recent results here -> oxytocin maybe? we could look at the twitter-timeline of @opensnporg, i publish papers i find there).
 
@@ -205,6 +206,7 @@ There are two possible solutions to this problem: One could only allow some (tru
 Another risk regarding data quality that should be kept in mind is a possible bias in data availability on openSNP, as we cannot rule out the possibility that only an unrepresentative subset of people buy DTC genetic testing, from which an even smaller subset is willing to publish the results, along with phenotypic information of medical relevance.
 
 \subsubsection*{Why should a user publish their genetic information? Pros vs. Cons}
+\philipp{Should this be a subsubsection, not rather a subsection?}
 With openSNP, we have built a platform that can be used by customers of DTC genetic testing to easily share their genetic and phenotypic data with a wide audience, as well as by scientists and interested citizens who are looking for datasets to be used in GWAS. Customers of DTC genetic testing also benefit from an easy access to primary literature on SNPs and genetic variations they carry. While we don't have collected enough data to perform full scale GWAS yet, this might be possible in the future, as user numbers are rising. 
 \subsubsection*{Privacy and health implications and ethical considerations}
 
@@ -230,11 +232,11 @@ The survey also asked some scaled questions which measured how strongly particip
 The survey data was analyzed with SPSS 19. 
 
 \subsection*{Technical realization of the platform}
-The main platform is realized using the web framework Ruby on Rails. Postgres is used as the main database backend for Rails. The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of the Public Library of Science is queried using the respective REST API, which delivers results in an XML-format. Summaries on SNPs are provided by SNPedia, through querying the content via the MediaWiki API. All databases are queried using the unique identifier of each SNP as the search term. 
+The main platform is realized using the web framework Ruby on Rails 3.0.10. Postgres 9.2 is used as the main database backend for Rails. The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of the Public Library of Science is queried using the respective REST API, which delivers results in an XML-format. Summaries on SNPs are provided by SNPedia, through querying the content via the MediaWiki API. All databases are queried using the unique identifier of each SNP as the search term. 
 
-SNPs are cataloged by their unique identifier, which consists of a prefix (mostly \textit{rs}) and a unique number. This is a common format, which is employed by the NCBI dbSNP database and is also widely used and easily parsed from different literature sources. Publications from the different databases as well as the users' genotypes are associated with individual SNPs by the Rs-ID. Allele and genotype frequencies are updated regularly, based on the data present in openSNP. 
+SNPs are catalogued by their unique identifier, which consists of a prefix (mostly \textit{rs}, rarely \textit{i}) and a unique number. This is a common format, which is employed by the NCBI dbSNP database and is also widely used and easily parsed from different literature sources. Publications from the different databases as well as the users' genotypes are associated with individual SNPs by the Rs-ID. Allele and genotype frequencies are updated regularly, based on the data present in openSNP. 
 
-Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are to be mailed to users and queries to external resources are handled using the ruby gem Resque and the standalone server Redis. Search features on the platform itself are implemented using SOLR and the ruby gem Sunspot. Additionally, data can be requested from openSNP using the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}. The required data is stored in a PostgreSQL database, the delivery of the data is done by using ProServer \cite{Finn2007}, which was modified by Gel et al. for use in easyDAS \cite{GelMoreno2011}. Requested data is delivered in XML-format to facilitate parsing. % kick out proserver? what's the citation Finn2007 for?
+Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are to be mailed to users and queries to external resources are handled using the ruby gem Resque and the standalone server Redis. Search features on the platform itself are implemented using Solr and the ruby gem Sunspot. Additionally, data can be requested from openSNP using the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}. The required data is stored in a PostgreSQL database.  Requested data is delivered in XML-format to facilitate parsing. Additionally, users can request data in the JSON-format, using a system not specified in any standard.
 
 OpenSNP only serves as a platform for SNPs, so methods for the delivery of nucleotide sequences as described in the DAS-standard are not implemented. Currently, two methods are implemented: \textit{features}, which is used to deliver SNPs located on specific chromosomes or between specific nucleotide positions, based on the user's query. The second method is \textit{sources}, which advertises all DAS-sources for all genotypes present in openSNP.
 
