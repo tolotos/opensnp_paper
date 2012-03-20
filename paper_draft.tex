@@ -95,19 +95,14 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are a cheap and quick way of assessing health risks by comparing Single Nucleotide Polymorphisms 
-between groups of participants. Direct-To-Consumer (DTC) Companies like 23andme offer SNP sequencing to their customers alongside 
-with an evaluation of the customer's genetic risks. However, the data 23andme and other companies generate is not accessible 
-to other scientists, and withholds some information from customers for various reasons. In this paper, we present an open 
-approach to Genome-wide association studies by introducing openSNP, a web platform which allows customers to openly share 
-their polymorphisms with scientists for free. We also present results of a survey to assess the willingness of DTC-customers 
-to openly share their genotyping and polymorphisms.
+Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants like Single Nucleotide Polymorphisms. The advent of Direct-To-Consumer genetic testing offers the analysis of Single Nucleotide Polymorphisms for an individual at a low cost without the need to consult a physician or geneticist. Genome-wide association studies compare the genetic variation between two groups to find correlations between membership in a group and the genetic variation. To find significant correlations it is necessary to have a large enough sample size. Over 100.000 people already got themselves genotyped through Direct-To-Consumer genetic testing and could be a valuable data source for association studies. However, generally this data is not public for various reasons and thus can’t be used by other scientists. Here we present a survey which evaluates if people are willing to publicly share their genetic information. In the light of those results we also present the web-platform openSNP. It is an open approach which allows participants of Direct-To-Consumer genetic testing to publish their genetic data along with phenotypic information into the public domain. Through this crowdsourced effort of collecting genetic and phenotypic information we create a valuable resource which can be used in a wide array of studies, included Genome-wide association studies.
 
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLoS ONE authors please skip this step.
 % Author Summary not valid for PLoS ONE submissions.   
 \section*{Author Summary}
+Missing for now.
 
 \section*{Introduction}
 
@@ -211,7 +206,7 @@ allows a complete reuse of the data without any constraints.
 Between the start of openSNP on 09/27/2011 and 12/18/2012, 214 people have signed 
 up with openSNP, and 79 genotyping files were made available. The openSNP 
 database lists 69,486,471 SNPs, which are distributed over 1,938,603 unique SNP-IDs.
-Figure n depicts the increase of users and genotyping files over time.
+Figure \ref{Figure1_label} depicts the increase of users and genotyping files over time.
 
 
 \subsubsection*{Crowdsourcing phenotypes}
@@ -227,11 +222,11 @@ information with small badges that are shown on their profile pages.
 
 In the same timeframe that was mentioned above, all users combined have 
 entered a total of 675 variations on 47 different phenotypes with those variations being 
-the different values on a given trait or phenotype. See figure n for the increase of phenotypic information over time.
+the different values on a given trait or phenotype. See figure \ref{Figure1_label} for the increase of phenotypic information over time.
 
 The mean number of users that have entered their variations for a single phenotype 
 is 14.36 (SD 12.65), the median is 10. The distribution of how many users have 
-entered their data per phenotype can be seen in figure n+1. The phenotype provided 
+entered their data per phenotype can be seen in figure \ref{Figure2_label}. The phenotype provided 
 by the most users is the eye color, which has been entered by 54 users. There are 
 two phenotypes which have so far only been provided by a single user: 
 The SAT Writing score and triglyceride-levels.
@@ -240,7 +235,7 @@ The SAT Writing score and triglyceride-levels.
 \subsubsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
 A total number of 15,229 documents relevant to the SNP-IDs listed in openSNP could be found in the databases of Mendeley, the Public Library of Science and SNPedia. 
-Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge by every user (Figure n+2). For usability reasons, 
+Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge by every user (Figure \ref{Figure3_label}). For usability reasons, 
 SNPs are ranked by the amount of information gathered by the external services. The external services themselves are ranked by how easily users can access information 
 from these sources. The SNPedia entries are given the highest impact, as those are already manually curated, followed by open access publications out of 
 the Public Library of Science. Lowest values are given to the Mendeley results, as those aren't necessary freely available to every user. 
@@ -362,7 +357,7 @@ OpenSNP only serves as a platform for SNPs, so methods for the delivery of nucle
 two methods are implemented: \textit{features}, which is used to deliver SNPs located on specific chromosomes or between specific nucleotide positions, 
 based on the user's query. The second method is \textit{sources}, which advertises all DAS-sources for all genotypes present in openSNP.
 
-A flowchart of all services incorporated in openSNP and of all the ways users can upload or access the data is given in figure n+3. The source code of openSNP is 
+A flowchart of all services incorporated in openSNP and of all the ways users can upload or access the data is given in figure \ref{Figure4_label}. The source code of openSNP is 
 published under Creative Commons BY-SA 3.0 and can be downloaded at http://github.com/gedankenstuecke/snpr. The genetical and phenotypical data is licensed under Creative Commons Zero. 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
@@ -373,6 +368,44 @@ published under Creative Commons BY-SA 3.0 and can be downloaded at http://githu
 \bibliography{papers}
 
 \section*{Figure Legends}
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.35]{chart_growth.png}
+	\end{center}
+	\caption{
+	{\bf Growth of openSNP.} The increase in numbers for users, genotyping-files, phenotypes and their variation from 27.09.2011 to 16.12.2011 is shown.} 
+	\label{Figure1_label}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.40]{histogram_phenotypes.png}
+	\end{center}
+	\caption{
+	{\bf Histogram of users/phenotype-distribution.} The x-axis shows the minimum number of users who provide information for a phenotype, the y-axis shows how many phenotypes have at least that many users.}
+	\label{Figure2_label}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.50]{paper_distribution.png}
+	\end{center}
+	\caption{
+	{\bf Distribution of external information gathered for SNPs in the openSNP-database.} Data on PLoS and SNPedia is openly available for every user. Publications on Mendeley are either Open Access (OA) or Closed Access (CA).} 
+	\label{Figure3_label}
+\end{figure}
+
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.60]{uml_diagram.png}
+	\end{center}
+	\caption{
+	{\bf Flow of data inside openSNP.} External databases and user-provided data are used as input. Output of data is done using the website, the \emph{Distributed Annotation System} and a JSON-API.} 
+	\label{Figure4_label}
+\end{figure}
+
+
+
 %\begin{figure}[!ht]
 %\begin{center}
 %%\includegraphics[width=4in]{figure_name.2.eps}
