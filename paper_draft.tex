@@ -137,7 +137,7 @@ such studies has been rising: Over 1200 GWAS have been performed \cite{Johnson20
 %(http://www.genome.gov/page.cfm?pageid=26525384&clearquery=1#result_table)  
 
 Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. 
-Those companies use DNA microarrays to screen for around 1 million SNPs spread over the human genome. In return, customers 
+These companies use DNA microarrays to screen for around 0.5 to 1 million SNPs spread over the human genome. In return, customers 
 get an analysis of the results, as well as a file that includes the customer's raw individual genotypes. In 2011, 23andMe 
 alone had over 100,000 customers\footnote{http://spittoon.23andme.com/2011/06/15/23andme-2011-state-of-the-database-address/} 
 - the company recognizes the potential to perform GWAS with this amount of data by using surveys to ask their customers about 
@@ -147,7 +147,7 @@ Over 30,000 23andme-customers have participated in those association studies.
 
 Although companies like 23andMe are willing to use the data for scientific research,
 it is not easy for individual scientists to access the data. 
-The generation of biomedical data by private companies raises concerns about privacy \footnote{https://www.23andme.com/about/privacy/}, 
+The generation of biomedical data by private companies raises concerns about privacy\footnote{https://www.23andme.com/about/privacy/}, 
 liabilty and consent \cite{Caulfield2011}. 
 Nevertheless, individual customers are willingly sharing their data. Most do so by uploading their data to
 their personal website or to open software repositories like \textit{GitHub}. 
@@ -351,7 +351,7 @@ the Public Library of Science is queried using the respective REST API, which de
 through querying the content via the MediaWiki API. All databases are queried using the unique identifier of each SNP as the search term. 
 
 SNPs are catalogued by their unique identifier, which consists of a prefix (mostly \textit{rs}, rarely \textit{i}) and a unique number. This is a common format, 
-which is employed by the NCBI dbSNP database and is also widely used and easily parsed from different literature sources. Publications from the different databases as 
+which is employed by the NCBI dbSNP database \cite{Sherry2001} and is also widely used and easily parsed from different literature sources. Publications from the different databases as 
 well as the users' genotypes are associated with individual SNPs by the Rs-ID. Allele and genotype frequencies are updated regularly, based on the data present in openSNP. 
 
 Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are to be mailed to users and queries to external resources 
