@@ -75,6 +75,10 @@
 {\Large
 \textbf{openSNP - Crowdsourcing Genome-Wide Association Studies}
 }
+% Alternative titles: 
+% openSNP - a new, open data-source for personalised medicine
+% What kind of person would share genotyping-data? Presenting a survey and an open data-source for personalised medicine
+% 
 % Insert Author names, affiliations and corresponding author email.
 \\
 Bastian Greshake$^{1,\ast}$, 
@@ -84,7 +88,7 @@ Julia Reda$^{4}$
 \\
 \bf{1} Goethe University, Frankfurt am Main, Germany
 \\
-\bf{2} Bond University, Gold Coast, Australia
+\bf{2} University of Queensland, Brisbane, Australia
 \\
 \bf{3} Westf\"alische Wilhelms Universit\"at, M\"unster, Germany
 \\
@@ -95,7 +99,7 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants like Single Nucleotide Polymorphisms. The advent of Direct-To-Consumer genetic testing offers the analysis of Single Nucleotide Polymorphisms for an individual at a low cost without the need to consult a physician or geneticist. Genome-wide association studies compare the genetic variation between two groups to find correlations between membership in a group and the genetic variation. To find significant correlations it is necessary to have a large enough sample size. Over 100.000 people already got themselves genotyped through Direct-To-Consumer genetic testing and could be a valuable data source for association studies. However, generally this data is not public for various reasons and thus can’t be used by other scientists. Here we present a survey which evaluates if people are willing to publicly share their genetic information. In the light of those results we also present the web-platform openSNP. It is an open approach which allows participants of Direct-To-Consumer genetic testing to publish their genetic data along with phenotypic information into the public domain. Through this crowdsourced effort of collecting genetic and phenotypic information we create a valuable resource which can be used in a wide array of studies, included Genome-wide association studies.
+Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants like Single Nucleotide Polymorphisms. The advent of Direct-To-Consumer genetic testing offers the analysis of Single Nucleotide Polymorphisms for an individual at a low cost without the need to consult a physician or geneticist. Genome-wide association studies compare the genetic variation between two groups to find correlations between membership in a group and the genetic variation. To find significant correlations it is necessary to have a large enough sample size. Over 100.000 people were already genotyped through Direct-To-Consumer genetic testing and could be a valuable data source for association studies. However, generally this data is not public for various reasons and thus cannot be used by other scientists. It is vital that there is a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates if people are willing to publicly share their genetic information. In the light of those results we also present the web-platform openSNP, which is a open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data along with phenotypic information into the public domain. Through this crowdsourced effort of collecting genetic and phenotypic information we create a valuable resource which can be used in a wide array of studies, included Genome-wide association studies.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -106,18 +110,19 @@ Missing for now.
 
 \section*{Introduction}
 
-The availabilty of new DNA sequencing techniques has shifted the focus of biological data acuisiton towards new biomedical applications.
-Many diseases – for example Alzheimers, Parkinsons or different types of cancers – are at least partly heritable and thus the genome 
+The availability of new DNA sequencing techniques has shifted the focus of biological data acquisition towards new biomedical applications.
+Many diseases – for example Alzheimers, Parkinsons or different types of cancers – are at least partly heritable and thus the genome 
 of patients can be used for diagnostic purposes. Using the genetic information of patients is made possible through the sharp decrease in costs for analysing genetic information. 
 Thus the importance genetic information in biomedicine will/may increase over the next years and may become a standard tool for diagnostics.
 
-The comparison of DNA sequences from individuals in a population can reveal variable sites, which are of major interest in investigating diseases. 
-A variation of only one nucleotide length at a given site is called a single Nucleotide Polymorphisms (SNP). 
-The different nucleotides at this site are defined as an allele.
-For diploid organisms, as us humans, the genotype at a given site consists of two alleles, which are independently inherited from each parent.
-Different methods have been developed to read SNPs in an individual, a
-process called genotyping. A widespread used method for genotyping individuals is the use of microarrays.
-In comparison to whole genome sequencing only sites which are known to be variable are analysed, making microarrays cheaper and faster \cite{Brown1999}. 
+%Kicked out the following due to Corpas' argument
+%The comparison of DNA sequences from individuals in a population can reveal variable sites, which are of major interest in investigating diseases. 
+%A variation of only one nucleotide length at a given site is called a single Nucleotide Polymorphisms (SNP). 
+%The different nucleotides at this site are defined as an allele.
+%For diploid organisms, as us humans, the genotype at a given site consists of two alleles, which are independently inherited from each parent.
+%Different methods have been developed to read SNPs in an individual, a
+%process called genotyping. A widespread used method for genotyping individuals is the use of microarrays.
+%In comparison to whole genome sequencing only sites which are known to be variable are analysed, making microarrays cheaper and faster \cite{Brown1999}. 
 
 
 If the genotypes for more then one individual are known, the analysis of
@@ -149,12 +154,12 @@ their personal website or to open software repositories like \textit{GitHub}.
 This data is scattered and unorganized, making it hard to use this information. While projects like SNPedia try to keep track of all 
 the genotyping files \cite{Cariaso2011}, they do not provide the information necessary to perform GWAS, as the phenotypic information is 
 most often not attached to the genetic information. Projects that attach the phenotype to the genetic information, 
-like the \textit{Personal Genome Project}, still don't allow for an easy re-use of the data, as they lack an advanced programming interface (API) 
+like the \textit{Personal Genome Project}, still do not allow for an easy re-use of the data, as they lack an advanced programming interface (API) 
 or other methods by which researchers could download the data and not every customer of DTC genetic testing can participate in it.  
 
-We designed an online survey to evaluate the support in the personal genetics community for a crowdsourced online plattform. Here we present the results of the survey in combination with the openSNP project. 
+We designed an online survey to evaluate the support in the personal genetics community for a crowdsourced online platform. Here we present the results of the survey in combination with the openSNP project. 
 The openSNP project is an online platform, which makes it possible for DTC customers to share genotypic and phenoytypic information and connect it with external data sources. 
-The data is made available to research via a Creative-Commones-Zero licence.
+The data is made available to research via a Creative-Commons-Zero licence.
 
 % Results and Discussion can be combined.
 \section*{Results}
@@ -162,12 +167,12 @@ The data is made available to research via a Creative-Commones-Zero licence.
 \subsection*{Survey on Sharing Genetic Information}
 In total 229 people, 180 with a self-reported chromosomal sex of XY and 56 with a self-reported chromosomal sex of XX participated in our survey on sharing genetic information with the public. 
 The mean age of the participants is 33 (SD = 11,29). 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already 
-customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% don't plan on 
+customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% do not plan on 
 becoming a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Cramer's V = 0.077). 
 
 67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would do so given the company 
-didn't share the data with third parties. 6.6 \% of the participants would not share their data. Participants self-identified as XX-chromosomal are slightly more likely to answer that DTC companies are allowed to use their results (Cramer's V = 0.221). Those who are a customers of a DTC company or are planning on becoming one in 
-the future are more likely to share their results, compared to those who don't plan on getting themselves genotyped (Somers-d = 0.331). 
+didn't share the data with third parties. 6.6 \% of the participants would not share their data. Participants self-identified as XX-chromosomal are slightly more likely to answer that DTC companies are allowed to use their results (Cramer's V = 0.221). Those who are customers of a DTC company or are planning on becoming one in 
+the future are more likely to share their results, compared to those who do not plan on getting themselves genotyped (Somers-d = 0.331). 
 
 There are substantial differences in terms of motivation, tested by Tukey's HSD test, between those people who have already been genotyped 
 and those who are not planning on getting genotyped. The first group is likely to agree more strongly, on a five-point scale, with the following 
@@ -238,13 +243,13 @@ A total number of 15,229 documents relevant to the SNP-IDs listed in openSNP cou
 Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge by every user (Figure \ref{Figure3_label}). For usability reasons, 
 SNPs are ranked by the amount of information gathered by the external services. The external services themselves are ranked by how easily users can access information 
 from these sources. The SNPedia entries are given the highest impact, as those are already manually curated, followed by open access publications out of 
-the Public Library of Science. Lowest values are given to the Mendeley results, as those aren't necessary freely available to every user. 
+the Public Library of Science. Lowest values are given to the Mendeley results, as those are not necessary freely available to every user. 
 An entry on SNPedia is valued 2.5 times as high as a PLoS publication and 5 times as high as a Mendeley entry.  
 
 \subsubsection*{Data access}
 OpenSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
 grouped by phenotypic variation, or access a single download that includes all genotyping files and all phenotypes in a comma-separated table. The genetic data is also 
-accessible through the Distributed Annotation System, which offers all data for specific chromosomes and specific positions on single chromosomes. 
+accessible through the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}, which offers all data for specific chromosomes and specific positions on single chromosomes. 
 The data is additionally available over a JSON-API, which allows users to directly access data in the JSON-format.
 
 
@@ -262,7 +267,7 @@ Although prices of exome or even full genome sequencing are dropping rapidly, GW
 and offer a possibility of getting insight into genetic variations, for example SNPs which are linked to different traits 
 on a population level. 
 
-Despite this benefit in terms of cost GWAS can only detect correlations of SNPs with those traits and don't allow 
+Despite this benefit in terms of cost GWAS can only detect correlations of SNPs with those traits and do not allow 
 inference on the cause for any correlation. Furthermore, GWAS need a large enough sample size, 
 which has to be statistically analysed by using sound methods. 
 Nevertheless, GWAS are still frequently used and new associations are found \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
@@ -275,10 +280,10 @@ By crowdsourcing the acquisition of genetic and phenotypic data, openSNP faces t
 open platform on the Internet, namely the need to trust users regarding the data they upload and enter on openSNP. 
 Additionally, the quality of the data varies, especially in terms of accuracy on the phenotypic variation, 
 with users entering data in different measurement systems. While we try to suggest similar entries to the users, 
-there are some cases where users wont follow those suggestions, so duplicates or similar phenotypes or variations in traits may arise. 
+there are some cases where users will not follow those suggestions, so duplicates or similar phenotypes or variations in traits may arise. 
 
 There are two possible solutions to this problem: One could only allow some (trusted) users to enter new phenotypes or one 
-could make users enter all possible variations of a phenotype while creating a new phenotype, so that later users can't add 
+could make users enter all possible variations of a phenotype while creating a new phenotype, so that later users cannot add 
 variations that have not been available from the start. Both methods have a disadvantage: In either case it makes it harder 
 for users to enter their data and thereby raises the bar for participation, which ultimately could lead to less data entered. 
 Facing this trade-off, we decided to keep data entry as easy as possible, at the cost of forcing users who want to perform GWAS 
@@ -291,14 +296,15 @@ is willing to publish the results, along with phenotypic information of medical 
 With openSNP, we have built a platform that can be used by customers of DTC genetic testing to easily share their genetic and phenotypic 
 data with a wide audience, as well as by scientists and interested citizens who are looking for datasets to be used in GWAS. 
 Customers of DTC genetic testing also benefit from an easy access to primary literature on SNPs and genetic variations they carry. 
-While we don't have collected enough data to perform full scale GWAS yet, this might be possible in the future, as user numbers are rising. 
+While we do not have collected enough data to perform full scale GWAS yet, this might be possible in the future, as user numbers are rising. 
 
-\subsection*{Privacy and health implications and ethical considerations}
+\subsection*{Privacy, health implications and ethical considerations}
 As we have found in the survey on sharing such results, many of these customers are also willing to share their results with scientists and 
 the public to help scientific progress, although people who have taken DTC genetic testing are considering the privacy implications that come 
 with openly sharing those results.      
 
-The advent of DTC genetic testing has led to new ethical and social issues. Much of the critique on DTC genetic testing focusses on the practice 
+%The advent of DTC genetic testing has led to new ethical and social issues. 
+Much of the critique on DTC genetic testing focusses on the practice 
 of delivering medical information without consulting a physician or genetic counselor to help patients/customers make sense of the information 
 and to put the new knowledge to good use \cite{Hauskeller2011,Hogarth2008,Wasson2009}. Less attention has been paid to the privacy implications 
 that come with this cheap way of obtaining genetical information \cite{Caulfield2011,Joh2011}. 
@@ -337,8 +343,8 @@ Additionally, participants had the possibility of giving their own reasons for s
 
 The survey data was analyzed with SPSS 19. 
 
-\subsection*{Technical realization of the platform}
-The main platform is realized using the web framework Ruby on Rails 3.0.10. Postgres 9.2 is used as the main database backend for Rails. 
+\subsection*{Technical implementation of the platform}
+The main platform is implemented using the web framework Ruby on Rails 3.0.10. Postgres 9.2 is used as the main database backend for Rails. 
 The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs 
 which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of 
 the Public Library of Science is queried using the respective REST API, which delivers results in an XML-format. Summaries on SNPs are provided by SNPedia, 
@@ -350,7 +356,7 @@ well as the users' genotypes are associated with individual SNPs by the Rs-ID. A
 
 Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are to be mailed to users and queries to external resources 
 are handled using the ruby gem Resque and the standalone server Redis. Search features on the platform itself are implemented using Solr and the ruby gem Sunspot. 
-Additionally, data can be requested from openSNP using the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}. The required data is stored in a PostgreSQL database.  
+Additionally, data can be requested from openSNP using the Distributed Annotation System. The required data is stored in a PostgreSQL database.  
 Requested data is delivered in XML-format to facilitate parsing. Additionally, users can request data in the JSON-format, using a system not specified in any standard.
 
 OpenSNP only serves as a platform for SNPs, so methods for the delivery of nucleotide sequences as described in the DAS-standard are not implemented. Currently, 
