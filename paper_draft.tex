@@ -99,7 +99,7 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants like Single Nucleotide Polymorphisms. The advent of Direct-To-Consumer genetic testing offers the analysis of Single Nucleotide Polymorphisms for an individual at a low cost without the need to consult a physician or geneticist. Genome-wide association studies compare the genetic variation between two groups to find correlations between membership in a group and the genetic variation. To find significant correlations it is necessary to have a large enough sample size. Over 100.000 people were already genotyped through Direct-To-Consumer genetic testing and could be a valuable data source for association studies. However, generally this data is not public for various reasons and thus cannot be used by other scientists. It is vital that there is a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates if people are willing to publicly share their genetic information. In the light of those results we also present the web-platform openSNP, which is a open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data along with phenotypic information into the public domain. Through this crowdsourced effort of collecting genetic and phenotypic information we create a valuable resource which can be used in a wide array of studies, included Genome-wide association studies.
+Genome-wide association studies are used to correlate phenotypic traits with genetic variants like Single Nucleotide Polymorphisms (SNPs). Genome-wide association studies compare the genetic variation between two groups to find correlations between membership in a group and the genetic variation. To find significant correlations it is necessary to have a large enough sample size. The advent of Direct-To-Consumer genetic testing offers the analysis of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing. This data could be a valuable source for association studies. However, this data is not public for various reasons and thus cannot be used by other scientists. It seems reasonable to create a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we also present the web-platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data along with phenotypic information into the public domain. Through this "crowdsourced" effort of collecting genetic and phenotypic information we create a valuable resource which can be used in a wide array of studies, included Genome-wide association studies. OpenSNP is hosted at www.opensnp.org, and the code is released under MIT-license at github.com/gedankenstuecke/snpr.
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -111,9 +111,8 @@ Missing for now.
 \section*{Introduction}
 
 The availability of new DNA sequencing techniques has shifted the focus of biological data acquisition towards new biomedical applications.
-Many diseases – for example Alzheimers, Parkinsons or different types of cancers – are at least partly heritable and thus the genome 
+Many diseases – for example Alzheimers, Parkinsons or different types of cancers – are at least partially heritable so the genome 
 of patients can be used for diagnostic purposes. Using the genetic information of patients is made possible through the sharp decrease in costs for analysing genetic information. 
-Thus the importance genetic information in biomedicine will/may increase over the next years and may become a standard tool for diagnostics.
 
 %Kicked out the following due to Corpas' argument
 %The comparison of DNA sequences from individuals in a population can reveal variable sites, which are of major interest in investigating diseases. 
@@ -125,7 +124,7 @@ Thus the importance genetic information in biomedicine will/may increase over th
 %In comparison to whole genome sequencing only sites which are known to be variable are analysed, making microarrays cheaper and faster \cite{Brown1999}. 
 
 
-If the genotypes for more then one individual are known, the analysis of
+If the genotypes for more than one individual are known, the analysis of
 allele frequencies can be used to associate SNPs with diseases and other inheritable traits. Genome-Wide Assocation Studies
 (GWAS) make use of statistics to compare the alleles of patients to the alleles of healthy controls. This
 enables GWAS to find alleles which are significantly overrepresented in patients and associate them with a disease.
