@@ -111,8 +111,8 @@ Missing for now.
 \section*{Introduction}
 
 The availability of new DNA sequencing techniques has shifted the focus of biological data acquisition towards new biomedical applications.
-Many diseases – for example Alzheimers, Parkinsons or different types of cancers – are at least partially heritable so the genome 
-of patients can be used for diagnostic purposes. Using the genetic information of patients is made possible through the sharp decrease in costs for analysing genetic information. 
+Many diseases – for example Alzheimers, Parkinsons or different types of cancers (needs citations) – are at least partially heritable so the genome 
+of patients can be used for diagnostic purposes. Using the genetic information of patients for diagnostics is made possible through the sharp decrease in costs for analysing genetic information \cite{Brown1999}. 
 
 %Kicked out the following due to Corpas' argument
 %The comparison of DNA sequences from individuals in a population can reveal variable sites, which are of major interest in investigating diseases. 
@@ -124,18 +124,18 @@ of patients can be used for diagnostic purposes. Using the genetic information o
 %In comparison to whole genome sequencing only sites which are known to be variable are analysed, making microarrays cheaper and faster \cite{Brown1999}. 
 
 
-If the genotypes for more than one individual are known, the analysis of
-allele frequencies can be used to associate SNPs with diseases and other inheritable traits. Genome-Wide Assocation Studies
-(GWAS) make use of statistics to compare the alleles of patients to the alleles of healthy controls. This
-enables GWAS to find alleles which are significantly overrepresented in patients and associate them with a disease.
+If genetic information for more than one individual is known, the analysis of
+allele frequencies of Single Nucleotide Polymorphisms (SNPs) can be used to associate such SNPs with diseases and other inheritable traits. Genome-Wide Assocation Studies
+(GWAS) make use of statistics to compare the allele frequencies in patients to the alleles in healthy controls. This
+enables GWAS to find SNPs which are significantly overrepresented in patients and associates those SNPs with a trait or disease.
 This method does not allow inference of causal differences but merely identifies correlations. 
 The first GWAS was published in 2005 and compared age-related macular degeneration in contrast 
 to a healthy control group \cite{Klein2005}. Since the beginning, the number of participants in 
 such studies has been rising. To date, over 1200 GWAS have been performed \cite{Johnson2009} and over 
-5000 SNPs have been linked to different diseases and traits \cite{Hindorff2009}. 
-%(http://www.genome.gov/page.cfm?pageid=26525384&clearquery=1#result_table)  
+5000 SNPs have been linked to different diseases and traits \cite{Hindorff2009}.   
 
-GWAS are not limited to the scientific community. Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. 
+GWAS are not only performed inside the traditional scientific community. 
+Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. 
 These companies use DNA microarrays to screen for around 0.5 to 1 million SNPs spread over the human genome. In return, customers 
 receive an analysis of the results, as well as a file that includes the customer's raw individual genotypes. In 2011, 23andMe 
 alone had over 100,000 customers \cite{23andMe2011}
@@ -148,106 +148,39 @@ The generation of biomedical data by private companies raises concerns about pri
 liability and consent \cite{Caulfield2011}. 
 Nevertheless, in some instances individual customers are willingly sharing their data. Most do so by uploading their data to
 their personal website or to open software repositories like \textit{GitHub}. 
-This data is scattered and unorganized, making it hard to use. While projects like SNPedia try to keep track of all 
+This data is scattered and unorganized, making it hard to use in studies. While projects like SNPedia try to keep track of all 
 the publicly available genotyping files \cite{Cariaso2011}, they usually do not provide the information necessary to perform GWAS, as the phenotypic information is 
 often not attached to the genetic information. Projects that attach the phenotype to the genetic information, 
-like the \textit{Personal Genome Project}, still do not allow for an easy re-use of the data, as they lack an advanced programming interface (API) 
+like the \textit{Personal Genome Project}, still do not allow for an easy re-use of the data, as they lack an application programming interface (API) 
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
 
-Here, we present the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. 
-We also present openSNP, an online platform which enables DTC customers to share genotypic and phenoytypic information, as well as receive additional information on their genotypes. 
-The genotypes are made available to researchers via the open Creative-Commons-Zero licence.
+As a follow up of a survey, which evaluated whether customers of DTC genetic testing would be willing to share their genotypic and phenotypic information (see Supplementary Materials), we designed openSNP, an online platform which enables DTC customers to freely share their genotypic and phenotypic data under a Creative Commons-Zero license. 
+The phenotypic and genotypic data can be retrieved from openSNP using different methods, which also include different API standards to allow automated processing of the data.
+Additionally openSNP also enables users of DTC genetic testing to receive further information on their genotypes, through the crowdsourced resource SNPedia and primary publications, like those of the Public Library of Science journals. 
 
 % Results and Discussion can be combined.
 \section*{Results}
 
-\subsection*{Survey on Sharing Genetic Information}
-In total 229 people, 180 with a self-reported chromosomal sex of XY and 56 with a self-reported chromosomal sex of XX participated in our survey on sharing genetic information with the public. 
-The mean age of the participants is 33 (SD = 11,29). 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already 
-customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% do not plan on 
-becoming a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Cramer's V = 0.077). 
+We created the openSNP project (http://opensnp.org) as an open, crowdsourced online platform for DTC customers interested in sharing their raw data and for researchers interested in performing GWAS or perform other types of analysis with the data. 
+Customers of DTC testing are encouraged to share their genotyping results along with their phenotypic traits to enable easy access for researchers.
+Users of openSNP can create a personal profile, discuss SNPs and phenotypes on the platform using a simple commenting system, or send each other private messages.
 
-67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would do so given the company 
-didn't share the data with third parties. 6.6 \% of the participants would not share their data. Participants self-identified as XX-chromosomal are slightly more likely to answer that DTC companies are allowed to use their results (Cramer's V = 0.221). Those who are customers of a DTC company or are planning on becoming one in 
-the future are more likely to share their results, compared to those who do not plan on getting themselves genotyped (Somers-d = 0.331). 
+People interested in using the data of openSNP can download complete dumps of the genotypic and phenotypic information or use query API endpoints utilizing JavaScript Object Notation (JSON) objects or the Distributed Annotation System (DAS) \cite{Dowell2001}. 
 
 
-There are substantial differences in terms of motivation, tested by Tukey's HSD test, between those people who have already been genotyped 
-and those who are not planning on getting genotyped. The first group is likely to agree more strongly, on a five-point scale, with motivations for sharing genotypic information. On the other hand, those people who are not planning on getting genotyped are more likely to agree with the following motivations 
-for not sharing their data. For easier comparison both of these groups are compared in table \ref{tab:motivations1}.
-
-\begin{table}
-\begin{tabular}{|l|l|l|}
-\hline
-& Turkey's HSD & \\ \cline{2-3}
-& Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who are already genotyped} & & \\ \hline 
-... curious & 1.159 & 0.193 \\ 
-... want to help scientists & 0.465 & 0.128 \\
-... for personal benefits & 0.448 & 0.183 \\ \hline
-\textbf{Motivation for not sharing in participants} & & \\ 
-\textbf{who are not planning to get genotyped} & & \\ \hline
-... fear of discrimination & 1.06 & 0.195 \\
-... breach of privacy & 0.821 & 0.225 \\
-... fear of personalized advertising & 0.848 & 0.208 \\ 
-... negative consequences for family members & 0.733 & 0.21 \\ \hline 
-\end{tabular}
-\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }
-\label{tab:motivations1}
-\end{table}
-
-\begin{table}
-\begin{tabular}{|l|l|l|}
-\hline
-& Turkey's HSD & \\ \cline{2-3}
-& Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who would share with their DTC provider} & & \\ \hline
-... curiosity & 1.99 & 0.321 \\
-... want to help science & 1.57 & 0.199 \\
-... for personal benefits & 0.951 & 0.308 \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who would not share with their DTC provider} & & \\ \hline
-... fear of discrimination & 1.52 & 0.322 \\
-... fear of consequences for family members & 1.146 & 0.32 \\
-... fear of personalized advertising & 1.112 & 0.357 \\ \hline
-\end{tabular}
-\caption{Differences in terms of motivations to share genotyping-data, comparison between participants who would share their genotyping data with their DTC provider with participants who would not share their data with their DTC provider.}
-\label{tab:motivations2}
-\end{table}
-
-Similarly, those people who would share data with their DTC provider under any circumstances are likely to agree more strongly with 
-the following motivations for sharing than those who would not share their data with their DTC company.
-Those participants who are not willing to share data with their DTC company are likely to agree more strongly with the some motivations 
-for not sharing their data when compared to those who would share their data with their DTC company under any circumstances, for an overview of the motivations of both groups, see table \ref{tab:motivations2}.
-
-In the case of curiosity as a motive, there is also a substantial difference between those who would share their data with their DTC company under the condition that it did not share the information and those who would not (mean difference = 1.116 SE = 0.344) as well as those who would share under any circumstances (mean difference = -0.874 SE = 0.182).
-
-In the cases of fear of discrimination and fear of a breach of privacy, substantial differences between all three categories exist. Those who would share their data with their DTC company as long as it did not share the information agree less strongly than those who would not share the data with both fear of discrimination as a motive for not sharing (mean difference = -0.615, SE = 0.345) as well as fear of a breach of privacy (mean difference = -0.668, SE = 0.346). Those who would share their data under any circumstances are even less likely to agree with these motives than those who would share only if their DTC company did not share the information (fear of discrimination: mean value = -0.906, SE = 0.182; breach of privacy: mean difference = -1.203, SE = 0.183).
-
-These survey-results indicate that there is a definite interest in customers of DTC-companies to share their results with other scientists. We've created the web-platform openSNP to help DTC-customers share their genotyping results with scientists, for free and under the open Creative Commons Zero-license. 
-
-\subsection*{openSNP}
-
-The openSNP project (http://opensnp.org) is an open, crowdsourced online platform for both DTC customers and researchers interested in performing GWAS. 
-DTC customers are encouraged to share their genotyping results and connect them with phenotypes to enable access for researchers.
-Users can create a personal profile, discuss SNPs and phenotypes on the 
-platform using a simple commenting system, or send each other private messages. 
-
-
-\subsubsection*{Sharing genotypic information}
-Currently users can upload their genotypings from the companies 23andme, deCODEme and FamilyTreeDNA via a webinterface to the openSNP 
-project. There is experimental support for openSNP-exomes. The uploaded data is published under the Creative Commons Zero-license, 
-which - in accordance with the Panton Principles (doi:10.1371/journal.pbio.1001195) - 
+\subsection*{Sharing genotypic information}
+Currently users can upload their genotyping results from the companies \textit{23andMe}, \textit{deCODEme }and \textit{FamilyTreeDNA} via a webinterface to the openSNP 
+project. There is experimental support for uploading exomes in the VCF format \cite{Danecek01082011}, as \textit{23andMe} recently started exome sequencing for its customers. So far only the SNPs of the exome data sets are visualized on openSNP, but the downloads include all variation found in the exome.
+The uploaded data is published under the Creative Commons Zero-license, 
+which - in accordance with the Panton Principles \cite{10.1371/journal.pbio.1001195} - 
 allows a complete reuse of the data without any constraints.
 Between the start of openSNP on 09/27/2011 and 12/18/2012, 214 people have signed 
 up with openSNP, and 79 genotyping files were made available. The openSNP 
-database lists 69,486,471 SNPs of which 1,938,603 are unique SNPs.
-Figure \ref{Figure1_label} depicts the increase of users and genotyping files over time.
+database lists 69,486,471 genotypes which are distributed over 1,938,603 unique SNPs.
+Figure \ref{Figure1_label} depicts the increase of users and genotyping files over time.\bastian{update all numbers}
 
 
-\subsubsection*{Crowdsourcing phenotypes}
+\subsection*{Crowdsourcing phenotypes}
 Users are able to create new phenotypes that are not yet 
 listed by openSNP. 
 The specification of these phenotypes is open and not limited 
@@ -267,30 +200,26 @@ is 14.36 (SD 12.65), the median is 10. The distribution of how many users have
 entered their data per phenotype can be seen in figure \ref{Figure2_label}. The phenotype provided 
 by the most users is the eye color, which has been entered by 54 users. There are 
 two phenotypes which have so far only been provided by a single user: 
-the SAT Writing score and triglyceride-levels.
+the SAT Writing score and triglyceride-levels.\bastian{update all numbers and graphs}
 
 
-\subsubsection*{Connection to external services}
+\subsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
-A total number of 15,229 documents relevant to the SNP-IDs listed in openSNP could be found in the databases of Mendeley, the Public Library of Science and SNPedia. 
+A total number of 15,229 documents \bastian{number needs to get updated}relevant to the SNPs listed in openSNP could be found in the publication databases of Mendeley, the Public Library of Science and in the crowdsourced SNPedia. 
 Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). For usability reasons, 
-SNPs are ranked by the amount of information gathered by the external services. The external services themselves are ranked by how easily non-scientists can understand information 
-from these sources. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
-the Public Library of Science. Lowest values are given to the Mendeley results, as those are not necessarily freely available to every user. 
+SNPs are ranked by the amount of information gathered through the external services. The external services themselves are ranked by how easily non-scientists can understand information 
+from these sources and available this information. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
+the Public Library of Science. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
 An entry on SNPedia is valued 2.5 times as high as a PLoS publication and 5 times as high as a Mendeley entry.  
 
-\subsubsection*{Data access}
+\subsection*{Data access}
 OpenSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
-grouped by phenotypic variation, or access a single download that includes all genotyping files and all phenotypes in a comma-separated table. The genetic data is also 
+grouped by phenotypic variation, or access a single download that includes all genotyping files and all phenotypic variation in a comma-separated table. The genetic data is also 
 accessible through the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}, which offers all data for specific chromosomes and specific positions on single chromosomes. 
-The data is additionally available over a JSON-API, which allows users to directly access data in the JSON-format.
+An example of how the DAS can be used can be found on openSNP where users genotypes are visualized inside a genome browser. So far all chromosomal positions are based on the human reference genome NCBI36, as this is the standard reference used by DTC providers right now. \bastian{should this maybe include an image as well?}
 
+The data is additionally available over a JSON-API, which allows users to directly access data in the JSON-format. The methods allow users to programmatically look for the genotypes and annotations at a given SNP as well as for phenotypes for a given user and phenotypic variation for a given phenotype.
 \section*{Discussion}
-
-\subsection*{Survey issues}
-As the survey was taken online by voluntary participants and was mainly spread in the personal genetics community, 
-the results do not reflect the general population, but over-represent those people most likely to be interested in
-a project such as openSNP: customers of DTC genetic testing companies and people with a high interest in biology. 
 
 \subsection*{Privacy, health implications and ethical considerations}
 
@@ -299,7 +228,7 @@ Much of the critique on DTC genetic testing focusses on the practice
 of delivering medical information without consulting a physician or genetic counsellor to help patients/customers make sense of the information 
 and to put the new knowledge to good use \cite{Hauskeller2011,Hogarth2008,Wasson2009}.  
 
-As we have found in the survey on sharing such results, many DTC customers are willing to share their results with the public to help scientific progress, without forgetting about the privacy implications that come with openly sharing genetic information. There is a variety of ethical and privacy implications when it comes to DTC genetic testing\cite{Caulfield2011,Joh2011}. 
+As we have found in our survey on sharing such results (see supplementary methods), many DTC customers are willing to share their results with the public to help scientific progress, without forgetting about the privacy implications that come with openly sharing genetic information. There is a variety of ethical and privacy implications when it comes to DTC genetic testing\cite{Caulfield2011,Joh2011}. 
 
 Our survey has shown that people are concerned about their privacy and fear that stakeholders like employers, insurance companies, governments 
 or advertisers might misuse the information. Policy makers start to react to those changes by introducing laws like the 
@@ -308,10 +237,10 @@ widely available genetic information. DTC genetic testing companies themselves a
 
 OpenSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
-of publishing their data. To further improve this process we are working on implementing an informed consent-processes 
-similar to \textit{Consent for Research} (http://www.weconsent.us).
+of publishing their data. To further improve this process we are looking forward to implement an informed consent-processes 
+by a provider like \textit{Consent for Research} (http://www.weconsent.us).
 
-\subsection*{GWAS and open data}
+\subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
 inference on the cause for any correlation. Furthermore, for a statistically sound analysis GWAS need a large enough sample size. Nevertheless, GWAS are still frequently used and new associations are found \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
 
@@ -331,38 +260,20 @@ variations that have not been available from the start.
 
 In both cases it makes it harder 
 for users to enter their data which raises the bar for participation.
-We decided to keep data entry as easy as possible, at the cost of forcing users who want to perform GWAS with the data to perform more quality control.
+We decided to keep data entry as easy as possible, at the cost of forcing users who want to perform GWAS with the data to perform additional quality control.
 
 Another risk regarding data quality that should be kept in mind is a possible bias in data availability on openSNP: only a subset of people buy DTC genetic testing, from which an even smaller subset is willing to publish the results, which can potentially lead to skewed GWAS-results.
 
 With openSNP, we have built a platform that can be used by customers of DTC genetic testing to easily share their genetic and phenotypic 
 data with a wide audience, as well as by scientists and interested citizens who are looking for datasets to freely use in their studies.
 Customers of DTC genetic testing also benefit from an easy access to primary literature on SNPs and genetic variations they carry. 
-While there is not enough data uploaded to perform a statistically sound GWAS yet, this will be possible in the future, as user numbers continue to rise.
+While there is not enough data uploaded to perform a statistically sound GWAS yet, this will be possible in the future, as user numbers continue to rise. By including the option of uploading exome data sets the platform already is capable of adjusting for changes in the type of data generated by DTC genetic testing.
 
  
 % You may title this section "Methods" or "Models". 
 % "Models" is not a valid title for PLoS ONE authors. However, PLoS ONE
 % authors may use "Analysis" 
 \section*{Materials and Methods}
-\subsection*{Survey on Sharing Genetic Information}
-The survey was performed using Google Docs and was distributed to possible participants through the 23andMe community, the DIYBiology mailing list, 
-blogs which focus on genetics and DTC genetic testing and social media like Twitter, Google Plus and Facebook.  
-
-The survey included demographics such as age, chromosomal sex and ethnicity of the participants. Furthermore, it included questions on their 
-(planned) customer-ship of a DTC company. If the participants already were customers, they were also asked if they were already sharing their genetic and phenotypic data. 
-All participants were asked if they would share their genetical or phenotypic information with their DTC company, possible answers were "Yes", "Yes, 
-but only if they did not share my medical information with anybody else" and No".
-
-The survey also asked some scaled questions which measured how strongly participants agreed/disagreed with different reasons for sharing or not sharing their 
-information. The scale went from 1 = strongly disagree to  5 = strongly agree. Motivations queried for sharing data 
-were "because I want to help scientists with their research", "because of possible personal benefits (e.g. getting treatments for a disease I have, 
-possibility of new medication, etc.)", "because it may deliver advertising that is relevant to me" and "out of curiosity". Motivations queried for not sharing 
-data were "because advertisers could use the information for targeted campaigns", "because of possible negative consequences for closely related persons", 
-"because of the breach of my privacy" and " because of the fear of discrimination (e.g. by the employer, the state, some insurance company)". 
-Additionally, participants had the possibility of giving their own reasons for sharing or not sharing their data.
-
-The survey data was analyzed with SPSS 19. 
 
 \subsection*{Technical implementation of the platform}
 The main platform is implemented using the web framework Ruby on Rails 3.0.10. Postgres 9.2 is used as the main database backend for Rails. 
