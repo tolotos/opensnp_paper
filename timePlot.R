@@ -1,0 +1,10 @@
+svg("NormedUserPhenoPheno.svg")
+par(mar=c(5, 4, 4, 6))
+plot(sort(strptime(pheno[,1], "%d.%m.%Y %H:%M")), pheno[,2],type="l", xlab="Time", ylab="Count Phenotypes",xaxt="n")
+axis.POSIXct(1,sort(strptime(pheno[,1], "%d.%m.%Y %H:%M")),format="%b-%y")
+par(new=T)
+plot(sort(strptime(usersp[,1], "%d.%m.%Y %H:%M")), usersp[,2],type="l",xlab="", yaxt="n",col="red",xaxt="n",ylab="")
+axis(4,col.axis="red")
+mtext("Count User-Phenotypes",side=4,line=3,col="red")
+dev.off()
+
