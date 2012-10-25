@@ -1,0 +1,8 @@
+svg("users.svg")
+users <- read.table("users.txt", sep="\t")
+plot(strptime(users[,2], format="%d.%m.%Y %H:%M"), users[,1], type="l", ylab="Amount of user-accounts",xlab="Time", xaxt="n")
+dmin <- min(strptime(users[,2], format="%d.%m.%Y %H:%M"))
+dminjan <-  as.POSIXct(format(dmin, "%Y-1-1"))
+seqYear <- seq(dminjan, by = "1 month", to = max(strptime(users[,2], format="%d.%m.%Y %H:%M")) + (86400 * 365))
+axis(1, at = seqYear, labels = format(seqYear, "%b-%y"), las = 1)
+dev.off()
