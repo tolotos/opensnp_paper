@@ -83,38 +83,37 @@
 \\
 Bastian Greshake$^{1,\ast}$, 
 Philipp Bayer$^{2}$, 
-Fabian Zimmer$^{3}$,
-Julia Reda$^{4}$,
-Helge Rausch$^{5}$
+Helge Rausch$^{3}$,
+Fabian Zimmer$^{4}$,
+Julia Reda$^{5}$
 \\
-\bf{1} Goethe University, Frankfurt am Main, Germany
+\bf{1} Molecular Ecology Group, Goethe University Frankfurt am Main, Germany
 \\
-\bf{2} University of Queensland, Brisbane, Australia
+\bf{2} Applied Bioinformatics Group, School of Agriculture and Food Sciences, The University of Queensland, Australia
 \\
-\bf{3} Westf\"alische Wilhelms Universit\"at, M\"unster, Germany
+\bf{3} Hochschule f\"ur Technik und Wirtschaft Berlin, Germany 
 \\
-\bf{4} Johannes-Gutenberg University, Mainz, Germany
+\bf{4} Evolutionary Genomics and Transcriptomics Lab, Department of Genetics, Evolution and Environment, University College London, England
 \\
-\bf{5} Hochschule für Technik und Wirtschaft, Berlin, Germany
+\bf{5} Johannes Gutenberg University Mayence, Germany
 \\
 $\ast$ E-mail: info@opensnp.org
 \end{flushleft}
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web-platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publicly publish at no cost their genetic data along with phenotypic information. Through this "crowdsourced" effort of collecting genetic and phenotypic information openSNP has become a valuable resource which can be used in a wide area of studies, including Genome-wide association studies. OpenSNP is hosted at www.opensnp.org, and the code is released under MIT-license at github.com/gedankenstuecke/snpr
+Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web-platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publicly publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a valuable resource which can be used in a wide area of studies, including Genome-wide association studies. OpenSNP is hosted at www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
 
 
 % Please keep the Author Summary between 150 and 200 words
 % Use first person. PLoS ONE authors please skip this step.
 % Author Summary not valid for PLoS ONE submissions.   
 \section*{Author Summary}
-Missing for now.
 
 \section*{Introduction}
 
 The availability of new DNA sequencing techniques has shifted the focus of biological data acquisition towards new biomedical applications.
-Many diseases – for example Alzheimers, Parkinsons or different types of cancers (needs citations) – are at least partially heritable so the genome 
+Many diseases – for example Alzheimer's \cite{alzheimer}, Parkinson's \cite{parkinsons} or different types of cancers \cite{breastcancer,prostatecancer} – are at least partially heritable so the genome 
 of patients can be used for diagnostic purposes. Using the genetic information of patients for diagnostics is made possible through the sharp decrease in costs for analysing genetic information \cite{Brown1999}. 
 
 %Kicked out the following due to Corpas' argument
@@ -128,7 +127,7 @@ of patients can be used for diagnostic purposes. Using the genetic information o
 
 
 If genetic information for more than one individual is known, the analysis of
-allele frequencies of Single Nucleotide Polymorphisms (SNPs) can be used to associate such SNPs with diseases and other inheritable traits. Genome-Wide Assocation Studies
+allele frequencies of Single Nucleotide Polymorphisms (SNPs) can be used to associate such SNPs with diseases and other inheritable traits. Genome-Wide Association Studies
 (GWAS) make use of statistics to compare the allele frequencies in patients to the alleles in healthy controls. This
 enables GWAS to find SNPs which are significantly overrepresented in patients and associates those SNPs with a trait or disease.
 This method does not allow inference of causal differences but merely identifies correlations. 
@@ -154,10 +153,10 @@ their personal website or to open software repositories like \textit{GitHub}.
 This data is scattered and unorganized, making it hard to use in studies. While projects like SNPedia try to keep track of all 
 the publicly available genotyping files \cite{Cariaso2011}, they usually do not provide the information necessary to perform GWAS, as the phenotypic information is 
 often not attached to the genetic information. Projects that attach the phenotype to the genetic information, 
-like the \textit{Personal Genome Project}, still do not allow for an easy re-use of the data, as they lack an application programming interface (API) 
+like the \textit{Personal Genome Project} \cite{Ball24072012}, still do not allow for an easy re-use of the data, as they currently lack an application programming interface (API) 
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
 
-Here, we present the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present openSNP, an online platform which enables DTC customers to share genotypic and phenoytypic information, as well as receive additional information on their genotypes. The genotypes are made available to researchers via the open Creative-Commons-Zero licence.
+Here, we present the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present openSNP, an online platform which enables DTC customers to share genotypic and phenoytypic information, as well as receive additional information on their genotypes. The genotypes are made available to researchers via the open Creative-Commons-Zero license.
 
 % Results and Discussion can be combined.
 \section*{Results}
@@ -274,12 +273,12 @@ the SAT Writing score and triglyceride-levels.\bastian{update all numbers and gr
 
 \subsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
-A total number of 15,229 documents \bastian{number needs to get updated}relevant to the SNPs listed in openSNP could be found in the publication databases of Mendeley, the Public Library of Science and in the crowdsourced SNPedia. 
-Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). For usability reasons, 
+A total number of 15,229 documents \bastian{number needs to get updated}relevant to the SNPs listed in openSNP could be found in the publication and annotation databases of Mendeley, the Public Library of Science, in the \emph{GET Evidence System} \cite{Ball24072012} and the \emph{NHGRI GWAS Catalog} \cite{Hindorff2009} and in the crowdsourced SNPedia. 
+Of the primary literature listed on Mendeley \& the Public Library of Science, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). For usability reasons, 
 SNPs are ranked by the amount of information gathered through the external services. The external services themselves are ranked by how easily non-scientists can understand information 
-from these sources and available this information. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
-the Public Library of Science. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
-An entry on SNPedia is valued 2.5 times as high as a PLoS publication and 5 times as high as a Mendeley entry.  
+from these sources and how available this information is to the public. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
+the Public Library of Science and the curated databases of the \emph{GET Evidence System} and the \emph{NHGRI GWAS Catalog}. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
+An entry on SNPedia is valued 2.5 times as high as a PLoS publication or entries in \emph{GET} or the \emph{GWAS Catalog} and 5 times as high as a Mendeley entry.  
 
 \subsection*{Data access}
 OpenSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
@@ -311,8 +310,7 @@ widely available genetic information. DTC genetic testing companies themselves a
 
 OpenSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
-of publishing their data. To further improve this process we are looking forward to implement an informed consent-processes 
-by a provider like \textit{Consent for Research} (http://www.weconsent.us).
+of publishing their data. Further versions of openSNP may optionally include further consent-processes.
 
 \subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
@@ -351,7 +349,7 @@ While there is not enough data uploaded to perform a statistically sound GWAS ye
 
 \subsection*{Survey on Sharing Genetic Information}
 The survey was performed using \textit{Google Docs} and was distributed to possible participants through the \textit{23andMe }community forums, the \textit{DIYBiology} mailing list, 
-blogs which focus on genetics and DTC genetic testing and social media like \textit{Twitter}, \textit{Google+} and \textit{Facebook}.  
+blogs which focus on genetics and DTC genetic testing and social media websites flike \textit{Twitter}, \textit{Google+} and \textit{Facebook}.  
 
 The survey included demographics such as age, chromosomal sex and ethnicity of the participants. Furthermore, it included questions on their 
 (planned) customer-ship with a DTC company. If the participants already were customers, they were also asked if they were already sharing their genetic and phenotypic data. 
@@ -373,14 +371,14 @@ The main platform is implemented using the web framework Ruby on Rails 3.0.10. P
 The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs 
 which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of 
 the Public Library of Science is queried using the respective REST API, which delivers results in an XML-format. Summaries on SNPs are provided by SNPedia, 
-through querying the content via the MediaWiki API. All databases are queried using the unique identifier of each SNP as the search term. 
+through querying the content via the MediaWiki API. The \emph{NHGRI GWAS Catalog} and the \emph{GET Evidence System} provide complete dumps in plain text formats. Those are regularly downloaded and parsed. All databases are queried or parsed using the unique identifier of each SNP as the search term. 
 
 SNPs are catalogued by their unique identifier, which consists of a prefix (mostly \textit{rs}, rarely \textit{i}) and a unique number. This is a common format, 
 which is employed by the NCBI dbSNP database \cite{Sherry2001} and is also widely used and easily parsed from different literature sources. Publications from the different databases as 
 well as the users' genotypes are associated with individual SNPs by the Rs-ID. Allele and genotype frequencies are updated regularly, based on the data present in openSNP. 
 
 Processes with a longer runtime, such as parsing the genotyping results, creating archives of results which are to be mailed to users and queries to external resources 
-are handled using the ruby gem Resque and the standalone server Redis. Search features on the platform itself are implemented using Solr and the ruby gem Sunspot. 
+are handled using the ruby gem Resque and the standalone key-value storage server Redis. Search features on the platform itself are implemented using Solr and the ruby gem Sunspot. 
 Additionally, data can be requested from openSNP using the Distributed Annotation System. The required data is stored in a PostgreSQL database.  
 Requested data is delivered in XML-format to facilitate parsing. Additionally, users can request data in the JSON-format, using a system not specified in any standard.
 
@@ -392,7 +390,7 @@ A flowchart of all services incorporated in openSNP and of all the ways users ca
 published under the MIT-license and can be downloaded at http://github.com/gedankenstuecke/snpr. The genetical and phenotypical data is licensed under Creative Commons Zero. 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
-We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. We would especially like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
+We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. Further thanks go to Samantha Clark and Dan Bolser for providing valuable feedback and feature ideas during the development and Thomas Down, author of \emph{BioDalliance}, and Rafael Jimenez, author of \emph{MyKaryoView}, for their support on implementing the Distributed Annotation System and the genome browser. For help with their APIs we are grateful to Mike Cariaso of \emph{SNPedia} and the PLOS \& Mendeley API teams. Last but not least: We would especially like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
 
 %\section*{References}
 % The bibtex filename
