@@ -157,12 +157,78 @@ often not attached to the genetic information. Projects that attach the phenotyp
 like the \textit{Personal Genome Project}, still do not allow for an easy re-use of the data, as they lack an application programming interface (API) 
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
 
-As a follow up of a survey, which evaluated whether customers of DTC genetic testing would be willing to share their genotypic and phenotypic information (see Supplementary Materials), we designed openSNP, an online platform which enables DTC customers to freely share their genotypic and phenotypic data under a Creative Commons-Zero license. 
-The phenotypic and genotypic data can be retrieved from openSNP using different methods, which also include different API standards to allow automated processing of the data.
-Additionally openSNP also enables users of DTC genetic testing to receive further information on their genotypes, through the crowdsourced resource SNPedia and primary publications, like those of the Public Library of Science journals. 
+Here, we present the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present openSNP, an online platform which enables DTC customers to share genotypic and phenoytypic information, as well as receive additional information on their genotypes. The genotypes are made available to researchers via the open Creative-Commons-Zero licence.
 
 % Results and Discussion can be combined.
 \section*{Results}
+\subsection*{Survey on Sharing Genetic Information}
+In total 229 people, 180 with a self-reported chromosomal sex of XY and 56 with a self-reported chromosomal sex of XX participated in our survey on sharing genetic information with the public. 
+The mean age of the participants is 33 (SD = 11,29). 81.7 \% reported their ethnicity as caucasian. 39.7 \% of the participants are already 
+customers of at least one DTC genetic testing company and further 30.1 \% of them plan on becoming one in the future. 29.7 \% do not plan on 
+becoming a DTC customer. There is no significant difference in the usage of DTC companies between chromosomal sexes (Cramer's V = 0.077). 
+
+67.7 \% of all participants would share their data with their DTC-company without any constraints, 25.8 \% would do so given the company 
+didn't share the data with third parties. 6.6 \% of the participants would not share their data. Participants self-identified as XX-chromosomal are slightly more likely to answer that DTC companies are allowed to use their results (Cramer's V = 0.221). Those who are customers of a DTC company or are planning on becoming one in 
+the future are more likely to share their results, compared to those who do not plan on getting themselves genotyped (Somers-d = 0.331). 
+
+
+There are substantial differences in terms of motivation, tested by Tukey's HSD test, between those people who have already been genotyped 
+and those who are not planning on getting genotyped. The first group is likely to agree more strongly, on a five-point scale, with motivations for sharing genotypic information. On the other hand, those people who are not planning on getting genotyped are more likely to agree with the following motivations 
+for not sharing their data, see table \ref{tab:motivations1}.
+
+\begin{table}
+\begin{tabular}{|l|l|l|}
+\hline
+& Turkey's HSD & \\ \cline{2-3}
+& Mean difference & SE \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who are already genotyped} & & \\ \hline 
+... curious & 1.159 & 0.193 \\ 
+... want to help scientists & 0.465 & 0.128 \\
+... for personal benefits & 0.448 & 0.183 \\ \hline
+\textbf{Motivation for not sharing in participants} & & \\ 
+\textbf{who are not planning to get genotyped} & & \\ \hline
+... fear of discrimination & 1.06 & 0.195 \\
+... breach of privacy & 0.821 & 0.225 \\
+... fear of personalized advertising & 0.848 & 0.208 \\ 
+... negative consequences for family members & 0.733 & 0.21 \\ \hline 
+\end{tabular}
+\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }
+\label{tab:motivations1}
+\end{table}
+
+\begin{table}
+\begin{tabular}{|l|l|l|}
+\hline
+& Turkey's HSD & \\ \cline{2-3}
+& Mean difference & SE \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who would share with their DTC provider} & & \\ \hline
+... curiosity & 1.99 & 0.321 \\
+... want to help science & 1.57 & 0.199 \\
+... for personal benefits & 0.951 & 0.308 \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who would not share with their DTC provider} & & \\ \hline
+... fear of discrimination & 1.52 & 0.322 \\
+... fear of consequences for family members & 1.146 & 0.32 \\
+... fear of personalized advertising & 1.112 & 0.357 \\ \hline
+\end{tabular}
+\caption{Differences in terms of motivations to share genotyping-data, comparison between participants who would share their genotyping data with their DTC provider with participants who would not share their data with their DTC provider.}
+\label{tab:motivations2}
+\end{table}
+
+Similarly, those people who would share data with their DTC provider under any circumstances are likely to agree more strongly with 
+the following motivations for sharing than those who would not share their data with their DTC company.
+Those participants who are not willing to share data with their DTC company are likely to agree more strongly with the some motivations 
+for not sharing their data when compared to those who would share their data with their DTC company under any circumstances, for an overview of the motivations of both groups, see table \ref{tab:motivations2}.
+
+In the case of curiosity as a motive, there is also a substantial difference between those who would share their data with their DTC company under the condition that it did not share the information and those who would not (mean difference = 1.116 SE = 0.344) as well as those who would share under any circumstances (mean difference = -0.874 SE = 0.182).
+
+In the cases of fear of discrimination and fear of a breach of privacy, substantial differences between all three categories exist. Those who would share their data with their DTC company as long as it did not share the information agree less strongly than those who would not share the data with both fear of discrimination as a motive for not sharing (mean difference = -0.615, SE = 0.345) as well as fear of a breach of privacy (mean difference = -0.668, SE = 0.346). Those who would share their data under any circumstances are even less likely to agree with these motives than those who would share only if their DTC company did not share the information (fear of discrimination: mean value = -0.906, SE = 0.182; breach of privacy: mean difference = -1.203, SE = 0.183).
+
+These survey-results indicate that there is a definite interest in customers of DTC-companies to share their results with other scientists. 
+
+\subsubsection*{Sharing genotypic information}
 
 We created the openSNP project (http://opensnp.org) as an open, crowdsourced online platform for DTC customers interested in sharing their raw data and for researchers interested in performing GWAS or perform other types of analysis with the data. 
 Customers of DTC testing are encouraged to share their genotyping results along with their phenotypic traits to enable easy access for researchers.
@@ -224,6 +290,11 @@ An example of how the DAS can be used can be found on openSNP where users genoty
 The data is additionally available over a JSON-API, which allows users to directly access data in the JSON-format. The methods allow users to programmatically look for the genotypes and annotations at a given SNP as well as for phenotypes for a given user and phenotypic variation for a given phenotype.
 \section*{Discussion}
 
+\subsection*{Survey issues}
+
+As the survey was taken online by voluntary participants and was mainly spread in the personal genetics community, the results do not reflect the general population, but over-represent those people most likely to be interested in a project such as openSNP: customers of DTC genetic testing companies and people with a high interest in biology. 
+
+
 \subsection*{Privacy, health implications and ethical considerations}
 
 %The advent of DTC genetic testing has led to new ethical and social issues. 
@@ -278,6 +349,25 @@ While there is not enough data uploaded to perform a statistically sound GWAS ye
 % authors may use "Analysis" 
 \section*{Materials and Methods}
 
+\subsection*{Survey on Sharing Genetic Information}
+The survey was performed using \textit{Google Docs} and was distributed to possible participants through the \textit{23andMe }community forums, the \textit{DIYBiology} mailing list, 
+blogs which focus on genetics and DTC genetic testing and social media like \textit{Twitter}, \textit{Google+} and \textit{Facebook}.  
+
+The survey included demographics such as age, chromosomal sex and ethnicity of the participants. Furthermore, it included questions on their 
+(planned) customer-ship with a DTC company. If the participants already were customers, they were also asked if they were already sharing their genetic and phenotypic data. 
+All participants were asked if they would share their genetical or phenotypic information with their DTC company, possible answers were "Yes", "Yes, 
+but only if they did not share my medical information with anybody else" and No".
+
+The survey also asked some scaled questions which measured how strongly participants agreed/disagreed with different reasons for sharing or not sharing their 
+information. The scale went from 1 = strongly disagree to  5 = strongly agree. Motivations queried for sharing data 
+were "because I want to help scientists with their research", "because of possible personal benefits (e.g. getting treatments for a disease I have, 
+possibility of new medication, etc.)", "because it may deliver advertising that is relevant to me" and "out of curiosity". Motivations queried for not sharing 
+data were "because advertisers could use the information for targeted campaigns", "because of possible negative consequences for closely related persons", 
+"because of the breach of my privacy" and "because of the fear of discrimination (e.g. by the employer, the state, some insurance company)". 
+Additionally, participants had the possibility of giving their own reasons for sharing or not sharing their data.
+
+The survey data was analyzed with SPSS 19. 
+
 \subsection*{Technical implementation of the platform}
 The main platform is implemented using the web framework Ruby on Rails 3.0.10. Postgres 9.2 is used as the main database backend for Rails. 
 The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs 
@@ -302,7 +392,7 @@ A flowchart of all services incorporated in openSNP and of all the ways users ca
 published under the MIT-license and can be downloaded at http://github.com/gedankenstuecke/snpr. The genetical and phenotypical data is licensed under Creative Commons Zero. 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
-We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. We would also like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
+We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. We would especially like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
 
 %\section*{References}
 % The bibtex filename
