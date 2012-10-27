@@ -102,7 +102,7 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web-platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publicly publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a valuable resource which can be used in a wide area of studies, including Genome-wide association studies. OpenSNP is hosted at www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
+Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data-repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web-platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publicly publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a valuable resource which can be used in a wide area of studies, including Genome-wide association studies. OpenSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -203,8 +203,8 @@ which - in accordance with the Panton Principles \cite{10.1371/journal.pbio.1001
 allows a complete reuse of the data without any constraints.
 Between the start of openSNP on 09/27/2011 and 10/27/2012, 633 people have signed 
 up with openSNP, and 270 genetic datasets were made available. The openSNP 
-database lists X genotypes which are distributed over 2,140,643 unique SNPs.
-Figures \ref{Figure1_label} and \ref{Figure2_label} depicts the increase of users and genotyping files over time.\bastian{update all numbers}
+database lists 215,546,685 genotypes which are distributed over 2,140,643 unique SNPs.
+Figures \ref{Figure1_label} and \ref{Figure2_label} depicts the increase of users and genotyping files over time.
 
 
 \subsection*{Crowdsourcing phenotypes}
@@ -222,17 +222,19 @@ In the same timeframe as above, all users combined have
 entered a total of 4743 variations on 130 different phenotypes with those variations being 
 the different values on a given trait or phenotype. The mean number of users that have entered their variations for a single phenotype 
 is 36.48. The distribution of how many users have 
-entered their data per phenotype , compared to the amount of unique phenotypes, can be seen in figure \ref{pheno}. The phenotype provided by the most users is "eye color", for which 207 users entered their phenotype. 
+entered their data per phenotype, compared to the amount of unique phenotypes, can be seen in figure \ref{pheno}. The phenotype provided by the most users is "eye color", for which 207 users entered their phenotype (retrieved 10/27/2012). 
 
 
 \subsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
-A total number of 15,229 documents \bastian{number needs to get updated}relevant to the SNPs listed in openSNP could be found in the publication and annotation databases of Mendeley, the Public Library of Science, in the \emph{GET Evidence System} \cite{Ball24072012} and the \emph{NHGRI GWAS Catalog} \cite{Hindorff2009} and in the crowdsourced SNPedia. 
-Of the primary literature listed on Mendeley \& the Public Library of Science, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). For usability reasons, 
+A total number of 21,134 documents relevant to the SNPs listed in openSNP could be found in the publication and annotation databases of Mendeley, the Public Library of Science, in the \emph{GET Evidence System} \cite{Ball24072012} and the \emph{NHGRI GWAS Catalog} \cite{Hindorff2009} and in the crowdsourced SNPedia.
+Of the primary literature listed on Mendeley \& the Public Library of Science, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). 
+
+For usability reasons, 
 SNPs are ranked by the amount of information gathered through the external services. The external services themselves are ranked by how easily non-scientists can understand information 
 from these sources and how available this information is to the public. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
 the Public Library of Science and the curated databases of the \emph{GET Evidence System} and the \emph{NHGRI GWAS Catalog}. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
-An entry on SNPedia is valued 2.5 times as high as a PLoS publication or entries in \emph{GET} or the \emph{GWAS Catalog} and 5 times as high as a Mendeley entry.  
+An entry on SNPedia is valued 2.5 times as high as a PLoS publication or entries in \emph{GET} or the \emph{GWAS Catalog} and 5 times as high as a Mendeley entry. 
 
 Users are also able to link their Fitbit-accounts to their user-accounts. Fitbit is a commercial service which lets their customers track their BMI, movement-data and sleep data. This data can be linked to openSNP to give interested researchers an automatically maintained dataset of body- and sleep-developments over time.
 
@@ -243,6 +245,7 @@ accessible through the Distributed Annotation System \cite{Dowell2001,Jenkinson2
 An example of how the DAS can be used can be found on openSNP where users genotypes are visualized inside a genome browser. So far all chromosomal positions are based on the human reference genome NCBI36, as this is the standard reference used by DTC providers right now. \bastian{should this maybe include an image as well?}
 
 The data is additionally available over a JSON-API, which allows users to directly access data in the JSON-format. The methods allow users to programmatically look for the genotypes and annotations at a given SNP as well as for phenotypes for a given user and phenotypic variation for a given phenotype.
+
 \section*{Discussion}
 
 \subsection*{Survey issues}
@@ -346,7 +349,7 @@ A flowchart of all services incorporated in openSNP and of all the ways users ca
 published under the MIT-license and can be downloaded at http://github.com/gedankenstuecke/snpr. The genetical and phenotypical data is licensed under Creative Commons Zero. 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
-We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. Further thanks go to Samantha Clark and Dan Bolser for providing valuable feedback and feature ideas during the development and Thomas Down, author of \emph{BioDalliance}, and Rafael Jimenez, author of \emph{MyKaryoView}, for their support on implementing the Distributed Annotation System and the genome browser. For help with their APIs we are grateful to Mike Cariaso of \emph{SNPedia} and the PLOS \& Mendeley API teams. Last but not least: We would especially like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
+We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in grammar, spelling and structure of this study. Further thanks go to Samantha Clark and Dan Bolser for providing valuable feedback and feature ideas during the development and Thomas Down, author of \emph{BioDalliance}, and Rafael Jimenez, author of \emph{MyKaryoView}, for their support on implementing the Distributed Annotation System and the genome browser. For help with their APIs we are grateful to Mike Cariaso of \emph{SNPedia} and the PLOS \& Mendeley API teams. We would especially like to thank the users of openSNP.org for their participation, their constructive criticisms and bug-finding abilities and especially for sharing their genotyping and phenotype data.
 
 %\section*{References}
 % The bibtex filename
