@@ -176,47 +176,6 @@ There are substantial differences in terms of motivation, tested by Tukey's HSD 
 and those who are not planning on getting genotyped. The first group is likely to agree more strongly, on a five-point scale, with motivations for sharing genotypic information. On the other hand, those people who are not planning on getting genotyped are more likely to agree with the following motivations 
 for not sharing their data, see table \ref{tab:motivations1}.
 
-\begin{table}
-\begin{tabular}{|l|l|l|}
-\hline
-& Turkey's HSD & \\ \cline{2-3}
-& Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who are already genotyped} & & \\ \hline 
-... curious & 1.159 & 0.193 \\ 
-... want to help scientists & 0.465 & 0.128 \\
-... for personal benefits & 0.448 & 0.183 \\ \hline
-\textbf{Motivation for not sharing in participants} & & \\ 
-\textbf{who are not planning to get genotyped} & & \\ \hline
-... fear of discrimination & 1.06 & 0.195 \\
-... breach of privacy & 0.821 & 0.225 \\
-... fear of personalized advertising & 0.848 & 0.208 \\ 
-... negative consequences for family members & 0.733 & 0.21 \\ \hline 
-\end{tabular}
-\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }
-\label{tab:motivations1}
-\end{table}
-
-\begin{table}
-\begin{tabular}{|l|l|l|}
-\hline
-& Turkey's HSD & \\ \cline{2-3}
-& Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who would share with their DTC provider} & & \\ \hline
-... curiosity & 1.99 & 0.321 \\
-... want to help science & 1.57 & 0.199 \\
-... for personal benefits & 0.951 & 0.308 \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & \\
-\textbf{who would not share with their DTC provider} & & \\ \hline
-... fear of discrimination & 1.52 & 0.322 \\
-... fear of consequences for family members & 1.146 & 0.32 \\
-... fear of personalized advertising & 1.112 & 0.357 \\ \hline
-\end{tabular}
-\caption{Differences in terms of motivations to share genotyping-data, comparison between participants who would share their genotyping data with their DTC provider with participants who would not share their data with their DTC provider.}
-\label{tab:motivations2}
-\end{table}
-
 Similarly, those people who would share data with their DTC provider under any circumstances are likely to agree more strongly with 
 the following motivations for sharing than those who would not share their data with their DTC company.
 Those participants who are not willing to share data with their DTC company are likely to agree more strongly with the some motivations 
@@ -243,10 +202,10 @@ project. There is experimental support for uploading exomes in the VCF format \c
 The uploaded data is published under the Creative Commons Zero-license, 
 which - in accordance with the Panton Principles \cite{10.1371/journal.pbio.1001195} - 
 allows a complete reuse of the data without any constraints.
-Between the start of openSNP on 09/27/2011 and 12/18/2012, 214 people have signed 
-up with openSNP, and 79 genotyping files were made available. The openSNP 
-database lists 69,486,471 genotypes which are distributed over 1,938,603 unique SNPs.
-Figure \ref{Figure1_label} depicts the increase of users and genotyping files over time.\bastian{update all numbers}
+Between the start of openSNP on 09/27/2011 and 10/27/2012, 633 people have signed 
+up with openSNP, and 270 genetic datasets were made available. The openSNP 
+database lists X genotypes which are distributed over 2,140,643 unique SNPs.
+Figures \ref{Figure1_label} and \ref{Figure2_label} depicts the increase of users and genotyping files over time.\bastian{update all numbers}
 
 
 \subsection*{Crowdsourcing phenotypes}
@@ -261,25 +220,22 @@ achievement system, rewarding users that upload their data and enter phenotypic
 information with small badges that are shown on their profile pages.
 
 In the same timeframe as above, all users combined have 
-entered a total of 675 variations on 47 different phenotypes with those variations being 
-the different values on a given trait or phenotype. See figure \ref{Figure1_label} for the increase of phenotypic information over time.
-
-The mean number of users that have entered their variations for a single phenotype 
-is 14.36 (SD 12.65), the median is 10. The distribution of how many users have 
-entered their data per phenotype can be seen in figure \ref{Figure2_label}. The phenotype provided 
-by the most users is the eye color, which has been entered by 54 users. There are 
-two phenotypes which have so far only been provided by a single user: 
-the SAT Writing score and triglyceride-levels.\bastian{update all numbers and graphs}
+entered a total of 4743 variations on 130 different phenotypes with those variations being 
+the different values on a given trait or phenotype. The mean number of users that have entered their variations for a single phenotype 
+is 36.48. The distribution of how many users have 
+entered their data per phenotype , compared to the amount of unique phenotypes, can be seen in figure \ref{pheno}. The phenotype provided by the most users is "eye color", for which 207 users entered their phenotype. 
 
 
 \subsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
 A total number of 15,229 documents \bastian{number needs to get updated}relevant to the SNPs listed in openSNP could be found in the publication databases of Mendeley, the Public Library of Science and in the crowdsourced SNPedia. 
-Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). For usability reasons, 
+Of the primary literature, 25 \% are released in open access journals and can be accessed free of charge. For usability reasons, 
 SNPs are ranked by the amount of information gathered through the external services. The external services themselves are ranked by how easily non-scientists can understand information 
 from these sources and available this information. The SNPedia entries are given the highest impact, as those are already manually curated and summarized in plain English, followed by open access publications out of 
 the Public Library of Science. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
 An entry on SNPedia is valued 2.5 times as high as a PLoS publication and 5 times as high as a Mendeley entry.  
+
+Users are also able to link their Fitbit-accounts to their user-accounts. Fitbit is a commercial service which lets their customers track their BMI, movement-data and sleep data. This data can be linked to openSNP to give interested researchers an automatically maintained dataset of body- and sleep-developments over time.
 
 \subsection*{Data access}
 OpenSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
@@ -401,34 +357,33 @@ We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in
 \section*{Figure Legends}
 \begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[scale=0.35]{chart_growth.png}
+		\includegraphics[scale=0.35]{25_10_2012_Graphs/users.png}
 	\end{center}
 	\caption{
-	{\bf Growth of openSNP.} The increase in numbers for users, genotyping-files, phenotypes and their variation from 27.09.2011 to 16.12.2011 is shown.} 
+	{\bf Growth of openSNP-user-accounts.} The increase in numbers for users from 27.09.2011 to 27.10.2012 is shown.} 
 	\label{Figure1_label}
 \end{figure}
-
 \begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[scale=0.40]{histogram_phenotypes.png}
+		\includegraphics[scale=0.35]{25_10_2012_Graphs/genotypes.png}
 	\end{center}
 	\caption{
-	{\bf Histogram of users/phenotype-distribution.} The x-axis shows the minimum number of users who provide information for a phenotype, the y-axis shows how many phenotypes have at least that many users.}
+	{\bf Growth of available genotypings.} The increase in numbers for genotyping-files from 27.09.2011 to 27.10.2012 is shown.} 
 	\label{Figure2_label}
 \end{figure}
-
 \begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[scale=0.50]{paper_distribution.png}
+		\includegraphics[scale=0.40]{25_10_2012_Graphs/phenotypes_vs_userphenotypes.png}
 	\end{center}
 	\caption{
-	{\bf Distribution of external information gathered for SNPs in the openSNP-database.} Data on PLoS and SNPedia is openly available for every user. Publications on Mendeley are either Open Access (OA) or Closed Access (CA).} 
-	\label{Figure3_label}
+	{\bf Development of unique phenotypes and phenotypic information over time.} The x-axis shows the time-frame from start of the project until October 2012, the left y-axis shows how many unique phenotypes have been entered, and the right y-axis shows the amount of phenotypes users entered.}
+	\label{pheno}
 \end{figure}
+
 
 \begin{figure}[!ht]
 	\begin{center}
-		\includegraphics[scale=0.60]{uml_diagram.png}
+		
 	\end{center}
 	\caption{
 	{\bf Flow of data inside openSNP.} External databases and user-provided data are used as input. Output of data is done using the website, the \emph{Distributed Annotation System} and a JSON-API.} 
@@ -451,6 +406,46 @@ We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in
 
 
 \section*{Tables}
+\begin{table}
+\begin{tabular}{|l|l|l|}
+\hline
+& Turkey's HSD & \\ \cline{2-3}
+& Mean difference & SE \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who are already genotyped} & & \\ \hline 
+... curious & 1.159 & 0.193 \\ 
+... want to help scientists & 0.465 & 0.128 \\
+... for personal benefits & 0.448 & 0.183 \\ \hline
+\textbf{Motivation for not sharing in participants} & & \\ 
+\textbf{who are not planning to get genotyped} & & \\ \hline
+... fear of discrimination & 1.06 & 0.195 \\
+... breach of privacy & 0.821 & 0.225 \\
+... fear of personalized advertising & 0.848 & 0.208 \\ 
+... negative consequences for family members & 0.733 & 0.21 \\ \hline 
+\end{tabular}
+\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }
+\label{tab:motivations1}
+\end{table}
+
+\begin{table}
+\begin{tabular}{|l|l|l|}
+\hline
+& Turkey's HSD & \\ \cline{2-3}
+& Mean difference & SE \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who would share with their DTC provider} & & \\ \hline
+... curiosity & 1.99 & 0.321 \\
+... want to help science & 1.57 & 0.199 \\
+... for personal benefits & 0.951 & 0.308 \\ \hline
+\textbf{Motivation for sharing genotypings in participants} & & \\
+\textbf{who would not share with their DTC provider} & & \\ \hline
+... fear of discrimination & 1.52 & 0.322 \\
+... fear of consequences for family members & 1.146 & 0.32 \\
+... fear of personalized advertising & 1.112 & 0.357 \\ \hline
+\end{tabular}
+\caption{Differences in terms of motivations to share genotyping-data, comparison between participants who would share their genotyping data with their DTC provider with participants who would not share their data with their DTC provider.}
+\label{tab:motivations2}
+\end{table}
 %\begin{table}[!ht]
 %\caption{
 %\bf{Table title}}
