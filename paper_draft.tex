@@ -330,7 +330,7 @@ The main platform is implemented using the web framework Ruby on Rails 3.0.10. P
 The database stores genotyping results, users' phenotypic information, literature results from Mendeley and the Public Library of Science as well as summaries on SNPs 
 which can be found in SNPedia. The literature database of Mendeley is queried using the REST API, which delivers results in JSON. The literature database of 
 the Public Library of Science is queried using the respective REST API, which delivers results in an XML-format. Summaries on SNPs are provided by SNPedia, 
-through querying the content via the MediaWiki API. The \emph{NHGRI GWAS Catalog} and the \emph{GET Evidence System} provide complete dumps in plain text formats. Those are regularly downloaded and parsed. All databases are queried or parsed using the unique identifier of each SNP as the search term. 
+through querying the content via the MediaWiki API. The \emph{NHGRI GWAS Catalog} and the \emph{GET Evidence System} provide complete dumps in plain text formats. Those are regularly downloaded and parsed. SNPs that are described as 'Insufficiently evaluated' in the \emph{GET Evidence System} are not stored. All databases are queried or parsed using the unique identifier of each SNP as the search term. 
 
 SNPs are catalogued by their unique identifier, which consists of a prefix (mostly \textit{rs}, rarely \textit{i}) and a unique number. This is a common format, 
 which is employed by the NCBI dbSNP database \cite{Sherry2001} and is also widely used and easily parsed from different literature sources. Publications from the different databases as 
