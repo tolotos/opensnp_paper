@@ -1,5 +1,5 @@
-names <- c("SNPedia", "PLOS", "Mendeley", "PGP", "Genome.gov")
-numbers <- c(8257, 1771, 11116, 289, 3095)
+numbers <- c(289, 1771, 3095, 8257, 11116)
+names <- c("PGP", "PLOS", "NHGRI Catalog", "SNPedia", "Mendeley")
 svg("papers_pie.svg")
 pie(numbers, labels=names)
 dev.off()
