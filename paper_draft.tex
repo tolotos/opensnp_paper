@@ -102,7 +102,7 @@ $\ast$ E-mail: info@opensnp.org
 
 % Please keep the abstract between 250 and 300 words
 \section*{Abstract}
-Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information, openSNP has become a valuable resource, which can be used in a wide area of studies, including Genome-wide association studies. OpenSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
+Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information, openSNP has become a valuable resource, which can be used in a wide area of studies, including Genome-wide association studies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -227,8 +227,8 @@ entered their data per phenotype, compared to the amount of unique phenotypes, c
 
 \subsection*{Connection to external services}
 In order to provide users with relevant information on their respective genotypes, openSNP scans databases of the scientific literature for specific SNPs. 
-A total number of 21,134 documents relevant to the SNPs listed in openSNP could be found in the publication and annotation databases of Mendeley, the Public Library of Science, in the \emph{GET Evidence System} \cite{Ball24072012} and the \emph{NHGRI GWAS Catalog} \cite{Hindorff2009} and in the crowdsourced SNPedia.
-Of the primary literature listed on Mendeley \& the Public Library of Science, 25 \% are released in open access journals and can be accessed free of charge (Figure \ref{Figure3_label}). 
+A total number of 21,134 documents relevant to the SNPs listed in openSNP could be found in the publication and annotation databases of Mendeley, the Public Library of Science, in the \emph{GET Evidence System} \cite{Ball24072012} and the \emph{NHGRI GWAS Catalog} \cite{Hindorff2009} and in the crowdsourced SNPedia (Figure \ref{Figure3_label}).
+Of the primary literature listed on Mendeley, the \emph{NHGRI GWAS Catalog} \& the Public Library of Science, about 20 \% are released in open access journals and can be accessed free of charge (Figure \ref{oa_label}), although probably not all publications on Mendeley are correctly flagged and the \emph{NHGRI GWAS Catalog} does not give details on whether a publication is Open Access or not. So the total number of Open Access publications might be higher. 
 
 For usability reasons, 
 SNPs are ranked by the amount of information gathered through the external services. The external services themselves are ranked by how easily non-scientists can understand information 
@@ -236,10 +236,10 @@ from these sources and how available this information is to the public. The SNPe
 the Public Library of Science and the curated databases of the \emph{GET Evidence System} and the \emph{NHGRI GWAS Catalog}. Lowest values are given to the Mendeley results, as the publications listed there are for the most part not freely available without subscriptions or one-time payments. 
 An entry on SNPedia is valued 2.5 times as high as a PLoS publication or entries in \emph{GET} or the \emph{GWAS Catalog} and 5 times as high as a Mendeley entry. 
 
-Users are also able to link their Fitbit accounts to their user-accounts. Fitbit is a commercial service which lets its customers track their BMI, movement and sleep data. This data can be linked to openSNP to give interested researchers an automatically maintained dataset of body and sleep developments over time.
+Users are also able to link their Fitbit\cite{fitbit} accounts to their user-accounts. Fitbit is a commercial service which lets its customers track their BMI, movement and sleep data. This data can be linked to openSNP to give interested researchers an automatically maintained dataset of body and sleep developments over time.
 
 \subsection*{Data access}
-OpenSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
+openSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
 grouped by phenotypic variation, or access a single download that includes all genotyping files and all phenotypic variation in a comma-separated table. The genetic data is also 
 accessible through the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}, which offers all data for specific chromosomes and specific positions on single chromosomes. 
 An example of how the DAS can be used is implemented on openSNP, where users' genotypes are visualized inside a genome browser. So far, all chromosomal positions are based on the human reference genome NCBI36, as this is the standard reference used by DTC providers right now. \bastian{should this maybe include an image as well?}
@@ -267,7 +267,7 @@ or advertisers might misuse the information. Policy makers start to react to tho
 \textit{Genetic Information Non-Discrimination Act} in the United States or the \emph{Gendiagnostikgesetz} in Germany to minimize the impact of
 widely available genetic information. DTC genetic testing companies themselves also try to educate their customers about the risks of releasing genetic data.  
 
-OpenSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
+openSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
 of publishing their data. Further versions of openSNP may optionally include further consent processes.
 
@@ -341,11 +341,11 @@ are handled using the ruby gem Resque and the standalone key-value storage serve
 Additionally, data can be requested from openSNP using the Distributed Annotation System. The required data is stored in a PostgreSQL database.  
 Requested data is delivered in XML-format to facilitate parsing. Additionally, users can request data in the JSON-format, using a system not specified in any standard.
 
-OpenSNP only serves as a platform for SNPs, so methods for the delivery of nucleotide sequences as described in the DAS-standard are not implemented. Currently, 
+openSNP only serves as a platform for SNPs, so methods for the delivery of nucleotide sequences as described in the DAS-standard are not implemented. Currently, 
 two methods are implemented: firstly \textit{features}, which is used to deliver SNPs located on specific chromosomes or between specific nucleotide positions, 
 based on the user's query. The second method is \textit{sources}, which advertises all DAS sources for all genotypes present in openSNP.
 
-A flowchart of all services incorporated in openSNP and of all the ways users can upload or access the data is given in figure \ref{Figure4_label}. The source code of openSNP is 
+A flowchart of all services incorporated in openSNP and of all the ways users can upload or access the data is given in Figure \ref{Figure4_label}. The source code of openSNP is 
 published under the MIT license and can be downloaded at http://github.com/gedankenstuecke/snpr. The genetical and phenotypical data is licensed under Creative Commons Zero. 
 % Do NOT remove this, even if you are not including acknowledgments
 \section*{Acknowledgments}
@@ -390,9 +390,18 @@ We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in
 	\label{Figure3_label}
 \end{figure}
 
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.1]{25_10_2012_Graphs/percent_oa.png}
+	\end{center}
+	\caption{
+	{\bf Ratio of Open Access Publications.} Green pieces are Open Access. The \emph{NHGRI GWAS Catalog} doesn't give information about the Open Access status.}
+	\label{oa_label}
+\end{figure}
 
 \begin{figure}[!ht]
 	\begin{center}
+	  \includegraphics[scale=0.3]{latest_uml.png}
 	\end{center}
 	\caption{
 	{\bf Flow of data inside openSNP.} External databases and user-provided data are used as input. Output of data is done using the website, the \emph{Distributed Annotation System} and a JSON-API.} 
@@ -416,43 +425,42 @@ We thank Dr. Manuel Corpas and Prof. Dr. Dave Edwards for constructive advice in
 
 \section*{Tables}
 \begin{table}
-\begin{tabular}{|l|l|l|l|l|}
+\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }  
+\begin{tabular}{|p{7cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
 \hline
-& Mean & Mean & Tukey's HSD & \\ 
-& \emph{Genotyped} & \emph{Not Genotyped} & Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & & & \\
-\textbf{who are already genotyped} & & & & \\ \hline 
-... curious & 3.82 & 2.66 & 1.159 & 0.193 \\ 
-... want to help scientists & 4.64 & 4.18  & 0.465 & 0.128 \\
-... for personal benefits & 3.77 & 3.32  & 0.448 & 0.183 \\ \hline
-\textbf{Motivation for not sharing in participants} & & & & \\ 
-\textbf{who are not planning to get genotyped} & & & & \\ \hline
-... fear of discrimination & 3.09 & 4.15  & 1.06 & 0.195 \\
-... breach of privacy & 3.01 & 3.68  & 0.821 & 0.225 \\
-... fear of personalized advertising & 3.03 & 3.88  & 0.848 & 0.208 \\ 
-... negative consequences for family members & 2.93 & 3.57  & 0.733 & 0.21 \\ \hline 
+& Mean \emph{Genotyped} & Mean \emph{Not Genotyped} & Mean Difference & Standard Error\\ 
+\hline
+\textbf{Motivation for sharing data in participants who are already genotyped} & & & & \\
+\hline 
+... curious & 3.82 & 2.66 & 1.159 & 0.193 \\ \hline % checked
+... want to help scientists & 4.64 & 4.18  & 0.465 & 0.128 \\ \hline % checked
+... for personal benefits & 3.77 & 3.32  & 0.448 & 0.183 \\ \hline % checked
+\textbf{Motivation for not sharing in participants who are not planning to get genotyped} & & & & \\ \hline
+... fear of discrimination & 3.09 & 4.15  & 1.06 & 0.195 \\ \hline % checked
+... breach of privacy & 3.01 & 3.68  & 0.666 & 0.211 \\ \hline % checked
+... fear of personalized advertising & 3.03 & 3.88  & 0.848 & 0.208 \\ \hline % checked
+... negative consequences for family members & 2.93 & 3.57  & 0.639 & 0.197 \\ \hline 
 \end{tabular}
-\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }
 \label{tab:motivations1}
 \end{table}
 
 \begin{table}
-\begin{tabular}{|l|l|l|l|l|}
-\hline
-& Mean & Mean & Tukey's HSD & \\ 
-& \emph{Sharing} & \emph{Not Sharing} & Mean difference & SE \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & & & \\
-\textbf{who would share} & & & & \\ \hline
-... curiosity & 3.86 & 1.87 & 1.99 & 0.321 \\
-... want to help science & 4.44 & 3.19 & 1.57 & 0.199 \\
-... for personal benefits & 3.68 & 2.73 & 0.951 & 0.308 \\ \hline
-\textbf{Motivation for sharing genotypings in participants} & & & & \\
-\textbf{who would not share} & & & & \\ \hline
-... fear of discrimination & 3.21 & 4.73 & 1.52 & 0.322 \\
-... fear of consequences for family members & 2.79 & 3.93 & 1.146 & 0.32 \\
-... fear of personalized advertising & 3.17 & 4.29 & 1.112 & 0.357 \\ \hline
-\end{tabular}
 \caption{Differences in terms of motivations to share genotyping-data, comparison between participants who would share their genotyping data with participants who would not share their data.}
+\begin{tabular}{|p{7cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+& Mean {Sharing} & Mean {Not Sharing} & Mean Difference & Standard Error \\ 
+\hline
+\textbf{Motivation for sharing genotypings in participants who would share} & & & & \\
+\hline
+... curiosity & 3.86 & 1.87 & 1.99 & 0.321 \\ \hline % checked
+... want to help science & 4.70 & 3.13 & 1.57 & 0.199 \\ \hline % checked
+... for personal benefits & 3.68 & 2.73 & 0.951 & 0.308 \\ \hline % checked
+\textbf{Motivation for sharing genotypings in participants who would not share} & & & & \\
+\hline
+... fear of discrimination & 3.21 & 4.73 & 1.52 & 0.322 \\ \hline % checked
+... fear of consequences for family members & 2.79 & 3.93 & 1.146 & 0.32 \\ \hline % checked
+... fear of personalized advertising & 3.17 & 4.29 & 1.112 & 0.357 \\ \hline % checked
+\end{tabular}
 \label{tab:motivations2}
 \end{table}
 %\begin{table}[!ht]
