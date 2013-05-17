@@ -106,9 +106,9 @@ $\ast$ E-mail: info@opensnp.org
 \section*{Abstract}
 Genome-wide association studies are widely used to correlate phenotypic traits with genetic variants. These studies usually compare the genetic variation between two groups to single out certain Single Nucleotide Polymorphisms (SNPs) that are linked to a phenotypic variation in one of the groups. However, it is necessary to have a large enough sample size to find statistically significant correlations. Direct-To-Consumer (DTC) genetic testing can supply additional data: DTC-companies offer the analysis of a large amount of SNPs for an individual at low cost without the need to consult a physician or geneticist. Over 100,000 people have already been genotyped through Direct-To-Consumer genetic testing companies. However, this data is not public for a variety of reasons and thus cannot be used in research. It seems reasonable to create a central open data repository for such data, but it was previously unknown if and how people would submit their data to such a repository. Here 
 %we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results 
-we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish at no cost their genetic data along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a 
+we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data at no cost along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a 
 %valuable 
-resource, which can be used in a wide area of studies, including Genome-wide association studies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
+resource for a wide area of studies, including Genome-wide association studies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -119,8 +119,7 @@ resource, which can be used in a wide area of studies, including Genome-wide ass
 \section*{Introduction}
 
 The availability of new DNA sequencing techniques has shifted the focus of biological data acquisition towards new biomedical applications.
-Many diseases - for example Alzheimer's \cite{alzheimer}, Parkinson's \cite{parkinsons} or different types of cancers \cite{breastcancer,prostatecancer} - are at least partially heritable, so the genome 
-of patients can be used for diagnostic purposes. Using the genetic information of patients for diagnostics is made possible through the sharp decrease in costs for analysing genetic information \cite{Brown1999}. 
+Many diseases - for example Alzheimer's \cite{alzheimer}, Parkinson's \cite{parkinsons} or different types of cancers \cite{breastcancer,prostatecancer} - are at least partially heritable, so the genome of patients can be used for diagnostic purposes. Using the genetic information of patients for diagnostics is made possible through the sharp decrease in costs for analysing genetic information \cite{Brown1999}. 
 
 %Kicked out the following due to Corpas' argument
 %The comparison of DNA sequences from individuals in a population can reveal variable sites, which are of major interest in investigating diseases. 
@@ -161,6 +160,8 @@ the publicly available genotyping files \cite{Cariaso2011}, they usually do not 
 often not attached to the genetic information. Projects that attach the phenotype to the genetic information, 
 like the \textit{Personal Genome Project} \cite{Ball24072012}, still do not allow for an easy re-use of the data, as they currently lack an application programming interface (API) 
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
+
+%Enter here: definition, benefits of crowdsourcing
 
 Here, we present 
 %the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present 
@@ -204,8 +205,8 @@ People interested in using the data of openSNP can download complete dumps of th
 
 
 \subsection*{Sharing genotypic information}
-Currently users can upload their genotyping results from the companies \textit{23andMe}, \textit{deCODEme }and \textit{FamilyTreeDNA} via a web interface to the openSNP 
-project. There is experimental support for uploading exomes in the VCF format \cite{Danecek01082011}, as \textit{23andMe} recently started exome sequencing for its customers. So far only the SNPs of the exome data sets are visualized on openSNP, but the downloads include all variation found in the exome.
+Currently users can upload their genotyping results from the companies \textit{23andMe}, \textit{deCODEme} and \textit{FamilyTreeDNA} via a web interface to the openSNP 
+project. There is experimental support for uploading exomes in the VCF format \cite{Danecek01082011}, as \textit{23andMe} recently started exome sequencing for its customers. So far only the SNPs of the exome data sets are stored on openSNP, but the downloads include all variation found in the exome.
 The uploaded data is published under the Creative Commons Zero license, 
 which - in accordance with the Panton Principles \cite{10.1371/journal.pbio.1001195} - 
 allows a complete re-use of the data without any constraints.
@@ -247,12 +248,19 @@ An entry on SNPedia is valued 2.5 times as high as a PLoS publication or entries
 Users are also able to link their Fitbit\cite{fitbit} accounts to their user-accounts. Fitbit is a commercial service which lets its customers track their BMI, movement and sleep data. This data can be linked to openSNP to give interested researchers an automatically maintained dataset of body and sleep developments over time.
 
 \subsection*{Data access}
-openSNP offers extensive access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
+openSNP offers complete access to the data uploaded by users. Anyone can download single genotyping files for specific users, get archives of multiple genotyping files 
 grouped by phenotypic variation, or access a single download that includes all genotyping files and all phenotypic variation in a comma-separated table. The genetic data is also 
 accessible through the Distributed Annotation System \cite{Dowell2001,Jenkinson2008}, which offers all data for specific chromosomes and specific positions on single chromosomes. 
-An example of how the DAS can be used is implemented on openSNP, where users' genotypes are visualized inside a genome browser. So far, all chromosomal positions are based on the human reference genome NCBI36, as this is the standard reference used by DTC providers right now. \bastian{should this maybe include an image as well?}
+An example of how the DAS can be used is implemented on openSNP, where users' genotypes are visualized inside a genome browser. All chromosomal positions are based on the human reference genome NCBI37, as this is the standard reference used by DTC providers right now.
 
-The data is additionally available over a JSON API, which allows users to directly access data in the JSON format. The methods allow users to programmatically look for the genotypes and annotations at a given SNP as well as for phenotypes for a given user and phenotypic variation for a given phenotype.
+The data is additionally available over a JSON API which allows users to directly access data in the JSON format. The methods allow users to programmatically look for the genotypes and annotations at a given SNP as well as for phenotypes for a given user and phenotypic variation for a given phenotype.
+
+% Compare openSNP to other platforms here
+
+\subsection*{Other crowdsourcing platforms}
+
+Compare to SNPedia, PGP
+
 
 \section*{Discussion}
 
@@ -302,7 +310,9 @@ In both cases it makes it harder
 for users to enter their data which raises the bar for participation.
 We decided to keep data entry as easy as possible, at the cost of forcing users who want to perform GWAS with the data to perform additional quality control.
 
-Another risk regarding data quality that should be kept in mind is a possible bias in data availability on openSNP: only a subset of people buy DTC genetic testing, from which an even smaller subset is willing to publish the results, which can potentially lead to skewed GWAS-results. 21 people, mainly from underrepresented demographics, have been offered free genotyping using funding provided by the Wikimedia Germany association in order to mitigate this bias.
+Another risk regarding data quality that should be kept in mind is a possible bias in data availability on openSNP: only a subset of people buy DTC genetic testing, from which an even smaller subset is willing to publish the results, which can potentially lead to skewed GWAS-results. 21 people, mainly from underrepresented demographics, have been offered free genotyping using funding provided by the Wikimedia Germany association in order to mitigate this bias. 
+
+Furthermore, it is impossible to verify whether users who have uploaded data are actually the sources for that data. This opens the venue to potentially malicious usage, as genotypings from strangers can be uploaded, as well as misinformation about phenotypes can be entered. The openSNP project has currently no means to verify the validity of data given to us by users. Of course, users can always delete their data or contact the team to delete stored data. No copies are kept at any time.
 
 With openSNP, we have built a platform that can be used by customers of DTC genetic testing to easily share their genetic and phenotypic 
 data with a wide audience, as well as by scientists and interested citizens who are looking for datasets to freely use in their studies.
