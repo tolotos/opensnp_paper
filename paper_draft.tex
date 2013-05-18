@@ -84,8 +84,7 @@
 Bastian Greshake$^{1,\ast}$, 
 Philipp E. Bayer$^{2,3}$, 
 Helge Rausch$^{4}$,
-Fabian Zimmer$^{5}$,
-Julia Reda$^{6}$
+Julia Reda$^{5}$
 \\
 \bf{1} Molecular Ecology Group, Goethe University Frankfurt am Main, Germany
 \\
@@ -95,9 +94,7 @@ Julia Reda$^{6}$
 \\
 \bf{4} Hochschule f\"ur Technik und Wirtschaft Berlin, Germany 
 \\
-\bf{5} Evolutionary Genomics and Transcriptomics Lab, Department of Genetics, Evolution and Environment, University College London, England
-\\
-\bf{6} Johannes Gutenberg University Mayence, Germany
+\bf{5} Johannes Gutenberg University Mayence, Germany
 \\
 $\ast$ E-mail: info@opensnp.org
 \end{flushleft}
@@ -108,7 +105,8 @@ Genome-wide association studies are widely used to correlate phenotypic traits w
 %we present a survey which evaluates whether people are willing to publicly share their genetic information. In the light of those results 
 we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data at no cost along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information openSNP has become a 
 %valuable 
-resource for a wide area of studies, including Genome-wide association studies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
+resource for a wide area of studies, including Genome-Wide Association S
+tudies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
 
 
 % Please keep the Author Summary between 150 and 200 words
@@ -161,7 +159,11 @@ often not attached to the genetic information. Projects that attach the phenotyp
 like the \textit{Personal Genome Project} \cite{Ball24072012}, still do not allow for an easy re-use of the data, as they currently lack an application programming interface (API) 
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
 
-%Enter here: definition, benefits of crowdsourcing
+%Enter here: definition, benefits of sourcing
+Crowdsourcing, giving a task into the hands of a potentially large number of Ð mainly intrinsically motivated Ð people, has become a widely used practice in the internet age and is getting adopted in the realm of science as well, with Galaxy Zoo and FoldIt (CITATIONS NEEDED) being two of the most-well known examples. 
+One of the main benefits of crowdsourcing is that small contributions to a project pile up to create a larger work, which would have been virtually impossible to create otherwise. 
+Galaxy Zoo enabled thousands of amateur astronomers to walk through thousands of telescopic images to categorize the shown objects at a rate which could not have been matched by the efforts of professional astronomers.
+Similarly crowdsourcing can not only be applied to analyzing data, but also to collecting data. Ornithology has been doing this for years (CITATION NEEDED). With the advent of DTC genetic testing and the internet a similar approach can now be brought to human genetics.
 
 Here, we present 
 %the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present 
@@ -258,8 +260,11 @@ The data is additionally available over a JSON API which allows users to directl
 % Compare openSNP to other platforms here
 
 \subsection*{Other crowdsourcing platforms}
+The most similar projects to openSNP are the SNPedia and the Personal Genome Project. The focus of the SNPedia is the aggregation and summarization of primary scientific literature on SNPs. The project uses a Wiki to store and display the data collected by volunteers contributing to the project. The data is mainly organized by the unique Rs-ID, as given by dbSNP. If Rs-IDs are missing the identifiers given by the DTC testing companies may be used, similar to the way openSNP stores the data. For individual SNPs pages may list scientific literature and summaries on the found impact can be given. As those pages are largely created manually and not automatically through database access these summaries may not be complete. openSNP utilizes the SNPedia in that it crawls their data for SNPs, the summary of the impact and the magnitude a SNP has. While they offer a page listing download-URLs the SNPedia does not offer any uploading capabilities for genetic data and has no APIs to easily access the different data sets.
 
-Compare to SNPedia, PGP
+The Personal Genome Project (PGP) has its focus on collecting and hosting genetic data as well as phenotypic one. Unlike openSNP they do not offer a completely open enrollment. For each participant of the PGP eligibility has to be established and participants have to give IRB approved informed consent. This allows for an easier re-use of the data, but at the same time makes it impossible for many people to enroll (e.g. non-US citizens). Depending on the specific use one has for the data this might be preferable to the open approach openSNP takes. While the PGP stores genotyping data as well as exome and genome data sets it is currently impossible to access this data through an API, instead data has to be extracted from their database in a highly manual fashion. The annotation database of the PGP is not aimed at delivering specific publications but instead focusses more on specific traits (IS THAT RIGHT?!). Their annotation data is incorporated into openSNP as well. 
+
+COMPARE MORE. DO A TABLE. SHOULD THIS MAYBE BE PUT IN THE DISCUSSION INSTEAD OF RESULTS?
 
 
 \section*{Discussion}
