@@ -15,6 +15,10 @@
 % amssymb package, useful for mathematical symbols
 \usepackage{amssymb}
 
+% for checkmarks
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\newcommand{\cmark}{\ding{51}}%
+\newcommand{\xmark}{\ding{55}}%
 % graphicx package, useful for including eps and pdf graphics
 % include graphics with the command \includegraphics
 \usepackage{graphicx}
@@ -160,10 +164,14 @@ like the \textit{Personal Genome Project} \cite{Ball24072012}, still do not allo
 or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
 
 %Enter here: definition, benefits of sourcing
-Crowdsourcing, giving a task into the hands of a potentially large number of Ð mainly intrinsically motivated Ð people, has become a widely used practice in the internet age and is getting adopted in the realm of science as well, with Galaxy Zoo and FoldIt (CITATIONS NEEDED) being two of the most-well known examples. 
+Crowdsourcing, giving a task into the hands of a potentially large number of ï¿½ mainly intrinsically motivated ï¿½ people, has become a widely used practice in the internet age and is getting adopted in the realm of science as well, with Galaxy Zoo and FoldIt (CITATIONS NEEDED) being two of the most-well known examples. 
 One of the main benefits of crowdsourcing is that small contributions to a project pile up to create a larger work, which would have been virtually impossible to create otherwise. 
 Galaxy Zoo enabled thousands of amateur astronomers to walk through thousands of telescopic images to categorize the shown objects at a rate which could not have been matched by the efforts of professional astronomers.
-Similarly crowdsourcing can not only be applied to analyzing data, but also to collecting data. Ornithology has been doing this for years (CITATION NEEDED). With the advent of DTC genetic testing and the internet a similar approach can now be brought to human genetics.
+Similarly crowdsourcing can not only be applied to analyzing data, but also to collecting data. This approach has been shown to work when it comes to tracking bird migration. With the advent of DTC genetic testing and the internet a similar approach can now be brought to human genetics.
+
+There have been studies investigating how likely customers of such companies are to share their data. \cite{Darst2013} investigated the likelihood of 2,024 individuals to share their test results with their health-care providers and found that 26.5\% (540 individuals) did share their results with physician or health-care provider. Those that shared where older, had a higher income and were less concerned about testing or the privacy implications of this sharing compared to customers that didn't share their data.
+
+Other studies have shown that DTC-customers see themselves as being well-informed. Interviews with early adopters have shown that these customers are better informed and more skeptical about the capabilities of genotypings than expected \cite{McGowan2010}. However, in another study of early adopters 32\% of customers had misperceptions about personal genomic testing \cite{Gollust2012}. Of these participants, 92\% intended to share their results with physicians in order to receive medical recommendations. In general, in both studies participants chose this technology to be better informed about genetic risks and to satisfy their own curiosity. 
 
 Here, we present 
 %the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present 
@@ -259,13 +267,6 @@ The data is additionally available over a JSON API which allows users to directl
 
 % Compare openSNP to other platforms here
 
-\subsection*{Other crowdsourcing platforms}
-The most similar projects to openSNP are the SNPedia and the Personal Genome Project. The focus of the SNPedia is the aggregation and summarization of primary scientific literature on SNPs. The project uses a Wiki to store and display the data collected by volunteers contributing to the project. The data is mainly organized by the unique Rs-ID, as given by dbSNP. If Rs-IDs are missing the identifiers given by the DTC testing companies may be used, similar to the way openSNP stores the data. For individual SNPs pages may list scientific literature and summaries on the found impact can be given. As those pages are largely created manually and not automatically through database access these summaries may not be complete. openSNP utilizes the SNPedia in that it crawls their data for SNPs, the summary of the impact and the magnitude a SNP has. While they offer a page listing download-URLs the SNPedia does not offer any uploading capabilities for genetic data and has no APIs to easily access the different data sets.
-
-The Personal Genome Project (PGP) has its focus on collecting and hosting genetic data as well as phenotypic one. Unlike openSNP they do not offer a completely open enrollment. For each participant of the PGP eligibility has to be established and participants have to give IRB approved informed consent. This allows for an easier re-use of the data, but at the same time makes it impossible for many people to enroll (e.g. non-US citizens). Depending on the specific use one has for the data this might be preferable to the open approach openSNP takes. While the PGP stores genotyping data as well as exome and genome data sets it is currently impossible to access this data through an API, instead data has to be extracted from their database in a highly manual fashion. The annotation database of the PGP is not aimed at delivering specific publications but instead focusses more on specific traits (IS THAT RIGHT?!). Their annotation data is incorporated into openSNP as well. 
-
-COMPARE MORE. DO A TABLE. SHOULD THIS MAYBE BE PUT IN THE DISCUSSION INSTEAD OF RESULTS?
-
 
 \section*{Discussion}
 
@@ -273,6 +274,18 @@ COMPARE MORE. DO A TABLE. SHOULD THIS MAYBE BE PUT IN THE DISCUSSION INSTEAD OF 
 %
 %As the survey was taken online by voluntary participants and was mainly spread in the personal genetics community, the results do not reflect the general population, but over-represent those people most likely to be interested in a project such as openSNP: customers of DTC genetic testing companies and people with a high interest in biology. 
 %
+
+\subsection*{Other crowdsourcing platforms}
+Projects similar to openSNP are the SNPedia, the Personal Genome Project and PatientsLikeMe.com (see table \ref{tab:platforms} for an overview). The focus of the SNPedia is the aggregation and summary of primary scientific literature on SNPs. The project uses a Wiki to store and display the data collected by volunteers contributing to the project. The data is mainly organized by the unique Rs-ID, as given by dbSNP. If Rs-IDs are missing the identifiers given by the DTC testing companies may be used, similar to the way openSNP stores the data. For individual SNPs pages may list scientific literature and summaries on the found impact can be given. As those pages are largely created manually and not automatically through database access these summaries may not be complete. openSNP utilizes the SNPedia in that it crawls their data for SNPs, the summary of the impact and the magnitude a SNP has. While they offer a page listing download-URLs the SNPedia does not offer any uploading capabilities for genetic data and has no APIs to easily access the different data sets.
+
+The Personal Genome Project (PGP) has its focus on collecting and hosting genetic as well as phenotypic data. Unlike openSNP they do not offer a completely open enrollment. For each participant of the PGP eligibility has to be established and participants have to give IRB approved informed consent. This allows for an easier re-use of the data, but at the same time makes it impossible for many people to enroll (e.g. non-US citizens). Depending on the specific use one has for the data this might be preferable to the open approach openSNP takes. While the PGP stores genotyping data as well as exome and genome data sets it is currently impossible to access this data through an API, instead data has to be manually extracted from their database. The annotation database of the PGP is not aimed at delivering specific publications but instead focuses more on specific traits (IS THAT RIGHT?!). The  annotation data stored by the PGP is incorporated into openSNP as well. 
+
+PatientsLikeMe is a community for patients with life-changing illnesses to track and share the development of their illness with other patients with similar illnesses \cite{Wicks2010}.  This helps patients in understanding their diseases better - 72\% of surveyed participants found the site "moderately" or "very helpful", for example when it comes to starting a new medication (37\% found the site helpful), or when it comes to changing the medication (27\%). The data stored in PatientsLikeMe is open to the public and has been shown to be useful for research, for example in Multiple Sclerosis \cite{Bove2013}.
+
+%COMPARE MORE. DO A TABLE. SHOULD THIS MAYBE BE PUT IN THE DISCUSSION INSTEAD OF RESULTS?
+
+% I think discussion is better - we might even change the comparison a bit and put it into introduction, by just comparing SNPedia, PGP etc.
+
 
 \subsection*{Privacy, health implications and ethical considerations}
 
@@ -292,6 +305,7 @@ widely available genetic information. DTC genetic testing companies themselves a
 openSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
 of publishing their data. Further versions of openSNP may optionally include further consent processes.
+
 
 \subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
@@ -448,6 +462,23 @@ We thank Dr. Manuel Corpas and Prof. David Edwards for constructive advice in gr
 
 
 \section*{Tables}
+\begin{table}
+\caption{Comparison of crowdsourced genetics platforms.}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+Name & Provides annotation & Provides data & Open enrollment & API & License \\ 
+\hline
+SNPedia & \checkmark & \xmark & N/A & \checkmark & CC-NC-SA 3.0 \\ 
+\hline
+PGP & \checkmark & \checkmark & \xmark & \xmark & CC-BY 1.0, CC0 \\
+\hline
+PatientsLikeMe & \xmark & \checkmark & \checkmark & \xmark & CC-BY-SA 3.0 \\
+\hline
+openSNP & \checkmark & \checkmark & \checkmark & \checkmark & CC-BY 3.0 \\
+\hline
+\end{tabular}
+\label{tab:platforms}
+\end{table}
 %\begin{table}
 %\caption{Differences in terms of motivation to share genotypings with the public in survey-participants who already received a genotyping compared to participants who are not planning to getting genotyped. }  
 %\begin{tabular}{|p{7cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
