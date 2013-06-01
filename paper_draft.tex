@@ -220,9 +220,8 @@ project. There is experimental support for uploading exomes in the VCF format \c
 The uploaded data is published under the Creative Commons Zero license, 
 which - in accordance with the Panton Principles \cite{10.1371/journal.pbio.1001195} - 
 allows a complete re-use of the data without any constraints.
-Between the start of openSNP on 09/27/2011 and 10/27/2012, 633 people have signed 
-up with openSNP, and 270 genetic datasets have been made available. The openSNP 
-database lists 215,546,685 genotypes which are distributed over 2,140,643 unique SNPs.
+Between the launch of openSNP on 09/27/2011 and 10/27/2012, 633 people have signed 
+up with openSNP, and 270 genetic datasets have been made available. As of 10/27/2012, the openSNP database lists 215,546,685 genotypes which are distributed over 2,140,643 unique SNPs.
 Figures \ref{Figure1_label} and \ref{Figure2_label} depict the increase in users and genotyping files since September 2011.
 
 
@@ -280,8 +279,9 @@ Projects similar to openSNP are the SNPedia, the Personal Genome Project and Pat
 
 The Personal Genome Project (PGP) has its focus on collecting and hosting genetic as well as phenotypic data. Unlike openSNP they do not offer a completely open enrollment. For each participant of the PGP eligibility has to be established and participants have to give IRB approved informed consent. This allows for an easier re-use of the data, but at the same time makes it impossible for many people to enroll (e.g. non-US citizens). Depending on the specific use one has for the data this might be preferable to the open approach openSNP takes. While the PGP stores genotyping data as well as exome and genome data sets it is currently impossible to access this data through an API, instead data has to be manually extracted from their database. The annotation database of the PGP is not aimed at delivering specific publications but instead focuses more on specific traits (IS THAT RIGHT?!). The  annotation data stored by the PGP is incorporated into openSNP as well. 
 
-PatientsLikeMe is a community for patients with life-changing illnesses to track and share the development of their illness with other patients with similar illnesses \cite{Wicks2010}.  This helps patients in understanding their diseases better - 72\% of surveyed participants found the site "moderately" or "very helpful", for example when it comes to starting a new medication (37\% found the site helpful), or when it comes to changing the medication (27\%). The data stored in PatientsLikeMe is open to the public and has been shown to be useful for research, for example in Multiple Sclerosis \cite{Bove2013}.
+PatientsLikeMe is a community for patients with life-changing illnesses to track and share the development of their illness with other patients with similar illnesses \cite{Wicks2010}.  This helps patients in understanding their diseases better - 72\% of surveyed participants found the site "moderately" or "very helpful", for example when it comes to starting a new medication (37\% found the site helpful), or when it comes to changing the medication (27\%). Some subsets of data stored in PatientsLikeMe are open to the public and has been shown to be useful for research, for example in Multiple Sclerosis \cite{Bove2013}.
 
+There are some projects that use gamification to let players crowdsource scientific data. For example, FoldIt is a puzzle game that lets players fold protein structures in order to achieve optimal structures. Players of Foldit have been able to identify protein structure and were even able to improve the activity of existing proteins structures \cite{Eiben2012}.
 %COMPARE MORE. DO A TABLE. SHOULD THIS MAYBE BE PUT IN THE DISCUSSION INSTEAD OF RESULTS?
 
 % I think discussion is better - we might even change the comparison a bit and put it into introduction, by just comparing SNPedia, PGP etc.
@@ -309,7 +309,7 @@ of publishing their data. Further versions of openSNP may optionally include fur
 
 \subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
-inference on the cause for any correlation. Furthermore, for a statistically sound analysis, GWAS need a large enough sample size. Nevertheless, GWAS are still frequently used and new associations are found \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
+inference on the cause for any correlation. Furthermore, for a statistically sound analysis, GWAS need a large enough sample size. Nevertheless, GWAS are still frequently used and new associations are still being discovered \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
 
 One way of bringing down costs for GWAS even further is to make use of already available genotyping results and datasets. 
 Data produced by DTC genetic testing companies is a promising source for such results, as those companies already have high 
@@ -472,7 +472,7 @@ SNPedia & \checkmark & \xmark & N/A & \checkmark & CC-NC-SA 3.0 \\
 \hline
 PGP & \checkmark & \checkmark & \xmark & \xmark & CC-BY 1.0, CC0 \\
 \hline
-PatientsLikeMe & \xmark & \checkmark & \checkmark & \xmark & CC-BY-SA 3.0 \\
+PatientsLikeMe & \xmark & \checkmark & \checkmark & \xmark & Closed \& CC-BY-SA 3.0 \\
 \hline
 openSNP & \checkmark & \checkmark & \checkmark & \checkmark & CC-BY 3.0 \\
 \hline
