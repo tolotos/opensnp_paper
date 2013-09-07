@@ -137,7 +137,7 @@ If genetic information on more than one individual is known, the analysis of
 allele frequencies of Single Nucleotide Polymorphisms (SNPs) can be used to associate such SNPs with illnesses and other inheritable traits. Genome-Wide Association Studies
 (GWAS) make use of statistics to compare the allele frequencies in patients to the alleles in healthy controls. This
 enables GWAS to find SNPs which are significantly overrepresented in patients and associates those SNPs with a trait or illness.
-This method does not allow inference of causal differences but merely identifies correlations. 
+While method does not allow inference of causal differences but merely identifies correlations they can serve as a valuable tool for the unbiased discovery of candidate loci which then can be checked up in functional follow up studies \cite{10.1371/journal.pgen.1002584}, leading to a deeper understanding of diseases and thus potentially to new drug targets.  
 The first GWAS was published in 2005 and compared age-related macular degeneration in contrast 
 to a healthy control group \cite{Klein2005}. Since the beginning, the number of participants in 
 such studies has been rising. To date, over 1200 GWAS have been performed \cite{Johnson2009} and over 
@@ -161,7 +161,7 @@ This data is scattered and unorganized, making it hard to use in studies. While 
 the publicly available genotyping files \cite{Cariaso2011}, they usually do not provide the information necessary to perform GWAS, as the phenotypic information is 
 often not attached to the genetic information. Projects that attach the phenotype to the genetic information, 
 like the \textit{Personal Genome Project} \cite{Ball24072012}, still do not allow for an easy re-use of the data, as they currently lack an application programming interface (API) 
-or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}.  
+or other methods by which researchers could download the data. Additionally, not every customer of DTC genetic testing can participate in the \textit{Personal Genome Project}, as their consent forms only allow residents of the United States to apply.  
 
 %Enter here: definition, benefits of sourcing
 Crowdsourcing, giving a task into the hands of a potentially large number of -- mainly intrinsically motivated -- people, has become a widely used practice in the internet age and is getting adopted in the realm of science as well. One of the main benefits of crowdsourcing is that small contributions to a project pile up to create a larger work, which would have been virtually impossible to create otherwise. This approach especially benefits scientists who might not have enough funding or time to create data, or in cases where the amounts of data are too large to be analyzed by researchers alone.
@@ -289,17 +289,21 @@ Much of the criticism of DTC genetic testing focuses on the practice
 of delivering medical information without consulting a physician or genetic counselor to help patients/customers make sense of the information and to put the new knowledge to good use \cite{Hauskeller2011,Hogarth2008,Wasson2009}.  
 
 %As we have found in our survey on sharing such results (see supplementary methods), many 
-There is a variety of ethical and privacy implications when it comes to DTC genetic testing \cite{Caulfield2011,Joh2011}. But studies show that DTC customers are willing to share their results with the public to help scientific progress, without forgetting about the privacy implications that come with openly sharing genetic information \cite{Darst2013}. 
+There is a variety of ethical and privacy implications when it comes to DTC genetic testing \cite{Caulfield2011,Joh2011,Joly2013}. But studies show that DTC customers are willing to share their results given the right circumstances and personal benefits gained through the sharing, while being aware that sharing genetic data can lead to misuse of the data and consequences like genetic discrimination  \cite{Darst2013}. 
 
 %Our survey has shown that 
-While people are concerned about their privacy and fear that stakeholders like employers, insurance companies, governments or advertisers might misuse the information \cite{Wolinsky2005}, policy makers start to react to those changes by introducing laws like the 
-\textit{Genetic Information Non-Discrimination Act} in the United States or the \emph{Gendiagnostikgesetz} in Germany to minimize the impact of
-widely available genetic information. DTC genetic testing companies themselves also try to educate their customers about the risks of releasing genetic data \cite{Lee2009}. 
+As people are concerned about their privacy and fear that stakeholders like employers, insurance companies, governments or advertisers might misuse the information \cite{Wolinsky2005}, policy makers start to react to those changes by having introduced laws like the 
+\textit{Genetic Information Non-Discrimination Act} (GINA) in the United States or the \emph{Gendiagnostikgesetz} (GenDG) in Germany to minimize the impact of
+widely available genetic information. DTC genetic testing companies themselves also try to educate their customers about the risks of releasing genetic data \cite{Lee2009}. Neither GINA nor the GenDG offer a complete protection of genetic discrimination, as certain things, such as life insurances, are not covered by those laws.  
 
 openSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
 of publishing their data. Further versions of openSNP may include further consent processes.
 
+For users of openSNP the biggest potential problem is legal genetic discrimination in fields not covered by laws as GINA or GenDG once their public data is re-identified. While users can register pseudonymously this should not be seen as ultimate protection against re-identification. 
+A recent study again showed that meta data, potentially attached to genetic profiles, such as date of birth, gender and postal code, can be be used to re-identify individuals on a name basis \cite{Sweeney2013}. 
+A similar approach utilized genetic markers on the Y chromosome along with genealogical databases and meta data such as age and state to infer sure names and from there on the individuals \cite{Gymrek18012013}. 
+Thus users need to be aware of the potential of re-idenification through providing meta data along with their genetic information and the genetic discrimination that could follow.
 
 \subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
@@ -307,9 +311,11 @@ inference on the cause for any correlation. Furthermore, for a statistically sou
 
 One way of bringing down costs for GWAS even further is to make use of already available genotyping results and datasets. 
 Data produced by DTC genetic testing companies is a promising source for such results, as those companies already have high 
-numbers of customers which are willing to pay for the genotyping by themselves.
+numbers of customers which are willing to pay for the genotyping by themselves. 
 
-By crowdsourcing the acquisition of genetic and phenotypic data, openSNP faces the same problems as any other 
+By offering a platform where customers of DTC genetic testing can publish their data openSNP for the general public tries to enable and facilitate the re-use of this already generated data. Allowing interested parties to use the data for studies on their own allows people to perform studies without the need to generate genetic data on their own. Additionally the data can be used to enrich other data sets in order to overcome limited sample sizes, which is especially of interest for rare diseases. 
+
+In crowdsourcing the acquisition of genetic and phenotypic data, openSNP faces the same problems as any other 
 open platform on the Internet, namely the need to trust users regarding the data they upload and enter on openSNP. 
 Additionally, the quality of the data varies, especially in terms of accuracy on the phenotypic variation, 
 with users entering data in different measurement systems. Another problem with user-entered data is the frequent switching between categorical and continuous phenotypes - for example, some users entered the specific value of their height, while other users entered their height according to a category like "150cm to 160cm". 
