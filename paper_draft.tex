@@ -137,7 +137,7 @@ If genetic information on more than one individual is known, the analysis of
 allele frequencies of Single Nucleotide Polymorphisms (SNPs) can be used to associate such SNPs with illnesses and other inheritable traits. Genome-Wide Association Studies
 (GWAS) make use of statistics to compare the allele frequencies in patients to the alleles in healthy controls. This
 enables GWAS to find SNPs which are significantly overrepresented in patients and associates those SNPs with a trait or illness.
-While method does not allow inference of causal differences but merely identifies correlations they can serve as a valuable tool for the unbiased discovery of candidate loci which then can be checked up in functional follow up studies \cite{10.1371/journal.pgen.1002584}, leading to a deeper understanding of diseases and thus potentially to new drug targets.  
+While the method does not allow inference of causal differences but merely identifies correlations, it can serve as a valuable tool for the unbiased discovery of candidate loci, which then can be checked up in functional follow-up studies \cite{10.1371/journal.pgen.1002584}, leading to a deeper understanding of diseases and thus potentially to new drug targets.  
 The first GWAS was published in 2005 and compared age-related macular degeneration in contrast 
 to a healthy control group \cite{Klein2005}. Since the beginning, the number of participants in 
 such studies has been rising. To date, over 1200 GWAS have been performed \cite{Johnson2009} and over 
@@ -147,8 +147,7 @@ GWAS are not only performed inside the traditional scientific community.
 Since 2006, companies like 23andMe, deCODEme or FamilyTreeDNA have been offering Direct-To-Consumer (DTC) genetic testing. 
 These companies use DNA microarrays to screen for around 0.5 to 1 million SNPs spread over the human genome. In return, customers 
 receive an analysis of the results, as well as a raw file that includes the customer's individual genotypes. In 2011, 23andMe 
-alone had over 100,000 customers \cite{23andMe2011}
--- the company realizes the potential of performing GWAS with this amount of data by using surveys to ask their customers about 
+alone had over 100,000 customers \cite{23andMe2011}. The company realizes the potential of performing GWAS with this amount of data by using surveys to ask their customers about 
 traits and illnesses. With the consent of the customer, the data is used for association studies. 23andMe has published several 
 studies in which known findings are replicated together with new associations for disorders like Parkinson's Disease \cite{Eriksson2010, Do2011}. 
 So far, over 30,000 23andMe-customers have participated in 23andMe's association studies, which proves that this data source has a lot of potential for other researchers.
@@ -171,7 +170,7 @@ Similarly, crowdsourcing can not only be applied to analyzing data, but also to 
 
 There have been studies investigating how likely customers of such companies are to share their data. \cite{Darst2013} investigated the likelihood of 2,024 individuals to share their test results with their health-care providers and found that 26.5\% (540 individuals) did share their results with their physician or health-care provider. Those that shared were older, had a higher income and were less concerned about testing or the privacy implications of sharing their data compared to customers that didn't share their data.
 
-Other studies have shown that DTC-customers see themselves as being well-informed. Interviews with early adopters have shown that these customers are better informed and more skeptical about the capabilities of genotyping than expected \cite{McGowan2010}. However, in another study of early adopters, 32\% of customers had misperceptions about personal genomic testing \cite{Gollust2012}. Of these participants, 92\% intended to share their results with physicians in order to receive medical recommendations. In both studies, participants generally chose this technology to be better informed about genetic risks and to satisfy their own curiosity. 
+Other studies have shown that DTC customers see themselves as being well-informed. Interviews with early adopters have shown that these customers are better informed and more skeptical about the capabilities of genotyping than expected \cite{McGowan2010}. However, in another study of early adopters, 32\% of customers had misperceptions about personal genomic testing \cite{Gollust2012}. Of these participants, 92\% intended to share their results with physicians in order to receive medical recommendations. In both studies, participants generally chose this technology to be better informed about genetic risks and to satisfy their own curiosity. 
 
 Here, we present 
 %the results of a survey designed to evaluate the support in the personal genetics community for a crowdsourced online platform. We also present 
@@ -270,7 +269,7 @@ The data is additionally available over a JSON API which allows users to directl
 %
 %As the survey was taken online by voluntary participants and was mainly spread in the personal genetics community, the results do not reflect the general population, but over-represent those people most likely to be interested in a project such as openSNP: customers of DTC genetic testing companies and people with a high interest in biology. 
 %
-Here, we present openSNP, a crowdsourced resource that enables customers of DTC testing companies to share their genotypings with researchers and receive new annotations for their genetic variants. With the number of active users already present on openSNP we have shown that customers of DTC companies are willing to share their data at no cost to researchers around the world and are willing to annotate their data with phenotypes.
+Here, we present openSNP, a crowdsourced resource that enables customers of DTC testing companies to share their genotypings with researchers and receive new annotations for their genetic variants. With the number of active users already present on openSNP, we have shown that customers of DTC companies are willing to share their data at no cost to researchers around the world and are willing to annotate their data with phenotypes.
 
 \subsection*{Comparing openSNP to other crowdsourcing platforms}
 Projects similar to openSNP are the SNPedia, the Personal Genome Project and PatientsLikeMe.com (see table \ref{tab:platforms} for an overview). The focus of the SNPedia is the aggregation and summary of primary scientific literature on SNPs. The project uses a Wiki to store and display the data collected by volunteers contributing to the project. The data is mainly organized by the unique Rs-ID, as given by dbSNP. If Rs-IDs are missing, the identifiers given by the DTC testing companies may be used, similar to the way openSNP stores the data. For individual SNPs, pages may list scientific literature and summaries on the found impact can be given. As those pages are largely created manually and not automatically through database access, these summaries may not be complete. openSNP utilizes the SNPedia by crawling their data for SNPs, the summary of the impact and the magnitude a SNP has. While they offer a page listing download-URLs, the SNPedia does not offer any uploading capabilities for genetic data and has no APIs to easily access SNPs or data subsets in the different data sets. Similarly, there is no way for users of SNPedia to share their phenotypes in a machine readable format. 
@@ -290,29 +289,29 @@ Much of the criticism of DTC genetic testing focuses on the practice
 of delivering medical information without consulting a physician or genetic counselor to help patients/customers make sense of the information and to put the new knowledge to good use \cite{Hauskeller2011,Hogarth2008,Wasson2009}.  
 
 %As we have found in our survey on sharing such results (see supplementary methods), many 
-There is a variety of ethical and privacy implications when it comes to DTC genetic testing \cite{Caulfield2011,Joh2011,Joly2013}. But studies show that DTC customers are willing to share their results given the right circumstances and personal benefits gained through the sharing, while being aware that sharing genetic data can lead to misuse of the data and consequences like genetic discrimination  \cite{Darst2013}. 
+There is a variety of ethical and privacy implications when it comes to DTC genetic testing \cite{Caulfield2011,Joh2011,Joly2013}. Nevertheless, studies show that DTC customers are willing to share their results given the right circumstances and personal benefits gained through the sharing, while being aware that sharing genetic data can lead to misuse of the data and consequences such as genetic discrimination  \cite{Darst2013}. 
 
 %Our survey has shown that 
 As people are concerned about their privacy and fear that stakeholders like employers, insurance companies, governments or advertisers might misuse the information \cite{Wolinsky2005}, policy makers start to react to those changes by having introduced laws like the 
 \textit{Genetic Information Non-Discrimination Act} (GINA) in the United States or the \emph{Gendiagnostikgesetz} (GenDG) in Germany to minimize the impact of
-widely available genetic information. DTC genetic testing companies themselves also try to create online communities - like the 23andMe community forums - that help in educating their customers about the risks of releasing genetic data \cite{Lee2009}. Neither GINA nor the GenDG offer a complete protection of genetic discrimination, as certain things, such as life insurances, are not covered by those laws.  
+widely available genetic information. DTC genetic testing companies themselves also try to create online communities - like the 23andMe community forums - that help in educating their customers about the risks of releasing genetic data \cite{Lee2009}. Neither GINA nor the GenDG offer complete protection from genetic discrimination, as certain areas, such as life insurances, are not covered by those laws.  
 
 openSNP openly addresses the problem of privacy implications that come with releasing genetic data twice, once during registration for openSNP and once during 
 the upload of the DTC genetic testing results. Users have to confirm that they have read and understood the disclaimer about possible side-effects 
 of publishing their data. Further versions of openSNP may include further consent processes.
 
-For users of openSNP the biggest potential problem is legal genetic discrimination in fields not covered by laws as GINA or GenDG once their public data is re-identified. While users can register pseudonymously this should not be seen as ultimate protection against re-identification. 
-A recent study again showed that meta data, potentially attached to genetic profiles, such as date of birth, gender and postal code, can be be used to re-identify individuals on a name basis \cite{Sweeney2013}. 
-A similar approach utilized genetic markers on the Y chromosome along with genealogical databases and meta data such as age and state to infer sure names and from there on the individuals \cite{Gymrek18012013}. 
-Thus users need to be aware of the potential of re-idenification through providing meta data along with their genetic information and the genetic discrimination that could follow.
+For users of openSNP, the biggest potential problem is legal genetic discrimination, in fields not covered by laws such as GINA or GenDG, once their public data is re-identified. As the genetic information itself is highly personalized the anonymous sharing of genetic data is impossible. And while users can register pseudonymously, this should not be seen as ultimate protection against re-identification. 
+A recent study once again showed that metadata, potentially attached to genetic profiles, such as date of birth, gender and postal code, can be be used to re-identify individuals on a name basis \cite{Sweeney2013}. 
+A similar approach utilized genetic markers on the Y chromosome along with genealogical databases and metadata such as age and state to infer surnames and from there on the individuals \cite{Gymrek18012013}. 
+Thus users need to be aware of the potential of re-identification through providing metadata along with their genetic information and the genetic discrimination that could follow.
 
 \subsection*{GWAS and Open Data}
 Although prices of exome or even full genome sequencing are dropping rapidly, GWAS are still considerably cheaper. However, GWAS can only detect correlations of SNPs with those traits and do not allow 
-inference on the cause for any correlation. Furthermore, for a statistically sound analysis, GWAS need a large enough sample size, which often isn't too easy to obtain. Either because generating the needed amount of data still is a cost factor or because it is hard to find enough participants for the case conditions, for example if rare diseases are to be studied. Nevertheless, GWAS are still frequently used and new associations are still being discovered \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
+inference on the cause for any correlation. Furthermore, for a statistically sound analysis, GWAS need a large enough sample size, which often is not easy to obtain. Either because generating the needed amount of data still is a cost factor or because it is hard to find enough participants for the case conditions, for example if rare diseases are to be studied. Nevertheless, GWAS are still frequently used and new associations are still being discovered \cite{10.1371.journal.pone.0031470,10.1371.journal.pone.0030309,10.1371.journal.pone.0029848}. 
 
 One way of bringing down costs for GWAS even further is to make use of already available genotyping results and datasets. 
 Data produced by DTC genetic testing companies is a promising source for such results, as those companies already have high 
-numbers of customers which are willing to pay for the genotyping by themselves. 
+numbers of customers who are willing to pay for the genotyping by themselves. 
 
 openSNP tries to enable and facilitate the re-use of this already generated data by offering a platform where customers of DTC genetic testing can publish their results into the public domain. Allowing interested parties to use the data for their own research allows scientists to perform studies without the need to generate genetic data sets on their own. Additionally the data can be used to enrich other data sets in order to overcome limited sample sizes, which is especially of interest for rare diseases. 
 
