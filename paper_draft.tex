@@ -71,6 +71,12 @@
 \newcommand{\bastian}[1]{\authornote{BG: #1}}
 \newcommand{\fabian}[1]{\authornote{FZ: #1}}
 \newcommand{\philipp}[1]{\authornote{PB: #1}}
+\usepackage[utf8x]{inputenc}
+\DeclareUnicodeCharacter{2717}{✗}
+%\usepackage{newunicodechar}
+%\newunicodechar{✓}{\checkmark}
+%\newunicodechar{✘}{\xmark}
+
 %% END MACROS SECTION
 \begin{document}
 
@@ -90,17 +96,17 @@ Philipp E. Bayer$^{3,4}$,
 Helge Rausch$^{5}$,
 Julia Reda$^{6}$
 \\
-\bf{1} Molecular Ecology Group, Goethe University Frankfurt am Main, Germany
+\bf{1} Molecular Ecology Group, Biodiversity \& Climate Research Centre, Frankfurt am Main, Germany
 \\
-\bf{2} Department for Applied Bioinformatics, Institute for Cell Biology and Neuroscience, Goethe University Frankfurt am Main, Germany 
+\bf{2} Department for Applied Bioinformatics, Institute for Cell Biology and Neuroscience, Goethe University, Frankfurt am Main, Germany 
 \\
 \bf{3} School of Land, Crop and Food Sciences and Australian Centre for Plant Functional Genomics, University of Queensland, Brisbane, Australia
 \\
 \bf{4} Australian Centre for Plant Functional Genomics, School of Agriculture and Food Sciences, University of Queensland, Brisbane, Australia
 \\
-\bf{5} Hochschule f\"ur Technik und Wirtschaft Berlin, Germany 
+\bf{5} Hochschule f\"ur Technik und Wirtschaft, Berlin, Germany 
 \\
-\bf{6} Johannes Gutenberg University Mainz, Germany
+\bf{6} Johannes Gutenberg University, Mainz, Germany
 \\
 $\ast$ E-mail: info@opensnp.org
 \end{flushleft}
@@ -113,12 +119,6 @@ Genome-Wide Association Studies are widely used to correlate phenotypic traits w
 Here we present the web platform openSNP, an open database which allows participants of Direct-To-Consumer genetic testing to publish their genetic data at no cost along with phenotypic information. Through this crowdsourced effort of collecting genetic and phenotypic information, openSNP has become a 
 %valuable 
 resource for a wide area of studies, including Genome-Wide Association Studies. openSNP is hosted at http://www.opensnp.org, and the code is released under MIT-license at http://github.com/gedankenstuecke/snpr
-
-
-% Please keep the Author Summary between 150 and 200 words
-% Use first person. PLoS ONE authors please skip this step.
-% Author Summary not valid for PLoS ONE submissions.   
-\section*{Author Summary}
 
 \section*{Introduction}
 
@@ -466,19 +466,19 @@ We thank Dr. Manuel Corpas and Prof. David Edwards for constructive advice in gr
 
 \section*{Tables}
 \begin{table}
-\caption{Comparison of crowdsourced genetics platforms. N/A = Not Applicable, \checkmark = Present, \xmark = Absent *SNPedia only provides an API to webpages of individual SNPs, not access to genetic data of individuals}
+\caption{Comparison of crowdsourced genetics platforms. N/A = Not Applicable, x = Present, - = Absent *SNPedia only provides an API to webpages of individual SNPs, not access to genetic data of individuals}
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
 Name & Provides  & Provides & Open  & API & IRB approval & License \\ 
 & annotation & data & enrollment & & & \\
 \hline
-SNPedia & (\checkmark*) & \xmark & N/A & \checkmark & N/A & CC-NC-SA 3.0 \\ 
+SNPedia & (x*) & - & N/A & x & N/A & CC-NC-SA 3.0 \\ 
 \hline
-PGP & \checkmark & \checkmark & \xmark & \xmark & \checkmark & CC-BY 1.0, CC0 \\
+PGP & x & x & - & - & x & CC-BY 1.0, CC0 \\
 \hline
-PatientsLikeMe & \xmark & \checkmark & \checkmark & \xmark & \checkmark & Closed, CC-BY-SA 3.0 \\
+PatientsLikeMe & - & x & x & - & x & Closed, CC-BY-SA 3.0 \\
 \hline
-openSNP & \checkmark & \checkmark & \checkmark & \checkmark & \xmark & CC-BY 3.0 \\
+openSNP & x & x & x & x & - & CC-BY 3.0 \\
 \hline
 \end{tabular}
 \label{tab:platforms}
