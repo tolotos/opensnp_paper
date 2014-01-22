@@ -65,10 +65,10 @@ to-do list together with outlook of personalised medicine
 
 First focus on biological issues:
 
-Polymorphisms to phenotypes, correlation only.
-Bias in the samples collected by openSNP?
-Sample size to small?
-Quality check for phenotypes?
+Polymorphisms to phenotypes, correlation only. done
+Bias in the samples collected by openSNP? done
+Sample size to small? done
+Quality check for phenotypes? done
 Mapping to haplotype blocks?
 Combination with the hapmap
 Manage increasing amount of data?
@@ -77,7 +77,7 @@ Manage increasing amount of data?
 from great power follows great responsibility!
 
 Imagine a world where all data is free...
-What privacy issues do arise? 
+What privacy issues do arise? done
 Is there an effective mechanism to avoid abuse or
-genetic discrimination?
-How should governments treat the additional  data?
+genetic discrimination? done
+How should governments treat the additional  data? done

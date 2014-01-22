@@ -1,0 +1,8 @@
+svg("genotypes.svg")
+genotypes <- read.table("genotypes.txt", sep="\t")
+plot(strptime(genotypes[,2], format="%d.%m.%Y %H:%M"), genotypes[,1], type="l", ylab="Amount of genotypings",xlab="Time", xaxt="n")
+dmin <- min(strptime(genotypes[,2], format="%d.%m.%Y %H:%M"))
+dminjan <-  as.POSIXct(format(dmin, "%Y-1-1"))
+seqYear <- seq(dminjan, by = "1 month", to = max(strptime(genotypes[,2], format="%d.%m.%Y %H:%M")) + (86400 * 365))
+axis(1, at = seqYear, labels = format(seqYear, "%b-%y"), las = 1)
+dev.off()
